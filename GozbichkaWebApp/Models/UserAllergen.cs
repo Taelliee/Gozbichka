@@ -6,5 +6,8 @@
         public Allergens Allergens { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
+
+        public ICollection<Allergens> AllergensCollection { get; set; }
+        public ICollection<User> UserCollection { get; set; }
     }
 }

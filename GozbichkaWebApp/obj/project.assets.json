@@ -558,23 +558,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP ZBook 15 G7\\.nuget\\packages\\": {},
+    "C:\\Users\\ndimi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\GozbichkaWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\GozbichkaWebApp.csproj",
       "projectName": "GozbichkaWebApp",
-      "projectPath": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\GozbichkaWebApp.csproj",
-      "packagesPath": "C:\\Users\\HP ZBook 15 G7\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\obj\\",
+      "projectPath": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\GozbichkaWebApp.csproj",
+      "packagesPath": "C:\\Users\\ndimi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP ZBook 15 G7\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ndimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -631,7 +631,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
