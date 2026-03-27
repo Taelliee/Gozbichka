@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GozbichkaWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8ef5970f7badf0b10d7919f670c962cf3d46581")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ac4fe5c4f6c556d20b5de736b0070860c56dc25")]
 [assembly: System.Reflection.AssemblyProductAttribute("GozbichkaWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GozbichkaWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

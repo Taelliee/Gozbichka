@@ -1,0 +1,18 @@
+﻿using GozbichkaWebApp.Enums;
+
+namespace GozbichkaWebApp.Models
+{
+    public class User
+    {
+        public int UserId { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+
+        //getimage?
+        public string IconURL { get; set; }
+
+        //more changes to password
+        public string Password { get; set; }
+
+    }
+}
