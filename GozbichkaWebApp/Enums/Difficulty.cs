@@ -1,6 +1,6 @@
 ﻿namespace GozbichkaWebApp.Enums
 {
-    public enum DifficultyType
+    public enum Difficulty
     {
     }
 }
