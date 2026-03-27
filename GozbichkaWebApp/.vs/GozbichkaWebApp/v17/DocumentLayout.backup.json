@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\",
+  "WorkspaceRootPath": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\mealcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\mealcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\enums\\difficultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:enums\\difficultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +30,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MealCategory.cs",
+              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\MealCategory.cs",
+              "RelativeDocumentMoniker": "Models\\MealCategory.cs",
+              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\MealCategory.cs",
+              "RelativeToolTip": "Models\\MealCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T12:15:50.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Difficulty.cs",
+              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Difficulty.cs",
+              "RelativeDocumentMoniker": "Models\\Difficulty.cs",
+              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Difficulty.cs",
+              "RelativeToolTip": "Models\\Difficulty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T12:15:13.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DifficultyType.cs",
+              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Enums\\DifficultyType.cs",
+              "RelativeDocumentMoniker": "Enums\\DifficultyType.cs",
+              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Enums\\DifficultyType.cs",
+              "RelativeToolTip": "Enums\\DifficultyType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T12:14:50.745Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Recipe.cs",
-              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
-              "RelativeDocumentMoniker": "Models\\Recipe.cs",
-              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
-              "RelativeToolTip": "Models\\Recipe.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABAAAAAAAAAAA==",
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T11:57:15.857Z",
+              "WhenOpened": "2026-03-27T12:14:04.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "Models\\Recipe.cs",
+              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
+              "RelativeToolTip": "Models\\Recipe.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T12:05:33.347Z",
               "EditorCaption": ""
             }
           ]

@@ -14,12 +14,16 @@ namespace GozbichkaWebApp.Models
         public int MealCategory_ID { get; set; }
         public MealCategory MealCategory { get; set; }
 
-        public Difficulty difficulty { get; set; }
+        public DifficultyType difficulty { get; set; }
 
         //getimage?
 
         public ICollection<Rating> Ratings { get; set; }
         public ICollection<RecipeStep> RecipeSteps { get; set; }
-
+        public ICollection<Product> Products { get; set; }
+        public ICollection<RecipeProduct> RecipeProducts { get; set; }
+        public ICollection<History> HistoryRecipes { get; set; }
+        public ICollection<Favorites> FavoriteRecipes { get; set; }
+        public ICollection<RecipeSeasonalCategory> RecipeSeasonalCategories { get; set; }
     }
 }
