@@ -10,5 +10,8 @@
         public string Unit { get; set; }
         public bool isOptional { get; set; }
         public int SubstituteProductId { get; set; }
+
+        public ICollection<Recipe> Recipes { get; set; }
+        public ICollection<Product> Products { get; set; }
     }
 }
