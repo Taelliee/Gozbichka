@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\",
+  "WorkspaceRootPath": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\mealcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\enums\\difficultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:enums\\difficultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\mealcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\mealcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\enums\\difficultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:enums\\difficultytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,66 +38,78 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MealCategory.cs",
-              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\MealCategory.cs",
-              "RelativeDocumentMoniker": "Models\\MealCategory.cs",
-              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\MealCategory.cs",
-              "RelativeToolTip": "Models\\MealCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T12:15:50.71Z",
+              "WhenOpened": "2026-03-27T12:19:05.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "History.cs",
+              "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\History.cs",
+              "RelativeDocumentMoniker": "Models\\History.cs",
+              "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\History.cs",
+              "RelativeToolTip": "Models\\History.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T12:18:57.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MealCategory.cs",
+              "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\MealCategory.cs",
+              "RelativeDocumentMoniker": "Models\\MealCategory.cs",
+              "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\MealCategory.cs",
+              "RelativeToolTip": "Models\\MealCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T12:15:50.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Difficulty.cs",
-              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Difficulty.cs",
+              "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Difficulty.cs",
               "RelativeDocumentMoniker": "Models\\Difficulty.cs",
-              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Difficulty.cs",
+              "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Difficulty.cs",
               "RelativeToolTip": "Models\\Difficulty.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T12:15:13.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T12:15:13.396Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "DifficultyType.cs",
-              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Enums\\DifficultyType.cs",
+              "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Enums\\DifficultyType.cs",
               "RelativeDocumentMoniker": "Enums\\DifficultyType.cs",
-              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Enums\\DifficultyType.cs",
+              "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Enums\\DifficultyType.cs",
               "RelativeToolTip": "Enums\\DifficultyType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T12:14:50.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Product.cs",
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -98,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Recipe.cs",
-              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
               "RelativeDocumentMoniker": "Models\\Recipe.cs",
-              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
+              "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
               "RelativeToolTip": "Models\\Recipe.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T12:05:33.347Z",
               "EditorCaption": ""
