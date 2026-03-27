@@ -20,10 +20,14 @@ namespace GozbichkaWebApp.Models
 
         public ICollection<Rating> Ratings { get; set; }
         public ICollection<RecipeStep> RecipeSteps { get; set; }
+<<<<<<< Updated upstream
         public ICollection<Product> Products { get; set; }
         public ICollection<RecipeProduct> RecipeProducts { get; set; }
         public ICollection<History> HistoryRecipes { get; set; }
         public ICollection<Favorites> FavoriteRecipes { get; set; }
         public ICollection<RecipeSeasonalCategory> RecipeSeasonalCategories { get; set; }
+=======
+
+>>>>>>> Stashed changes
     }
 }

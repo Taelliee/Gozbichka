@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,6 +30,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -43,6 +48,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -119,14 +125,22 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+=======
+>>>>>>> Stashed changes
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
               "RelativeDocumentMoniker": "Models\\Recipe.cs",
               "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
               "RelativeToolTip": "Models\\Recipe.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAsAAAAAAAAAAAA3wAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T12:05:33.347Z",
+=======
+              "ViewState": "AgIAAAsAAAAAAAAAAAA5wBUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T11:57:52.118Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             }
           ]

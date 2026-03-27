@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.csproj.AssemblyReference.cache
 C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\rpswa.dswa.cache.json
 C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.GeneratedMSBuildEditorConfig.editorconfig
@@ -36,3 +37,43 @@ C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net
 C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.pdb
 C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.genruntimeconfig.cache
 C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\ref\GozbichkaWebApp.dll
+=======
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.csproj.AssemblyReference.cache
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.AssemblyInfoInputs.cache
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.AssemblyInfo.cs
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.csproj.CoreCompileInputs.cache
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.RazorAssemblyInfo.cache
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.RazorAssemblyInfo.cs
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.sourcelink.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\appsettings.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\GozbichkaWebApp.staticwebassets.runtime.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\GozbichkaWebApp.staticwebassets.endpoints.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\GozbichkaWebApp.exe
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\GozbichkaWebApp.deps.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\GozbichkaWebApp.runtimeconfig.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\GozbichkaWebApp.dll
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\GozbichkaWebApp.pdb
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\scopedcss\bundle\GozbichkaWebApp.styles.css
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\scopedcss\projectbundle\GozbichkaWebApp.bundle.scp.css
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\Gozbichk.6A76B268.Up2Date
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.dll
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\refint\GozbichkaWebApp.dll
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.pdb
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.genruntimeconfig.cache
+C:\Users\HP ZBook 15 G7\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\ref\GozbichkaWebApp.dll
+>>>>>>> Stashed changes

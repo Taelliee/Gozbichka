@@ -9,5 +9,8 @@
         public int RecipeId { get; set; }
         public Recipe Recipe { get; set; }
 
+        public ICollection<User> Users { get; set; }
+        public ICollection<Recipe> Recipes { get; set; }
+
     }
 }

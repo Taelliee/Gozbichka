@@ -8,5 +8,8 @@ namespace GozbichkaWebApp.Models
         public Recipe Recipe { get; set; }
         public int UserId { get; set; }    
         public User User { get; set; }
+
+        public ICollection<Recipe> Recipes { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }
