@@ -1,0 +1,10 @@
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.csproj.AssemblyReference.cache
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.AssemblyInfoInputs.cache
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.AssemblyInfo.cs
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.csproj.CoreCompileInputs.cache
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.RazorAssemblyInfo.cache
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.RazorAssemblyInfo.cs
+C:\Users\ndimi\OneDrive\Documents\GitHub\Gozbichka\GozbichkaWebApp\obj\Debug\net8.0\GozbichkaWebApp.sourcelink.json

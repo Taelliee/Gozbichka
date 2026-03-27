@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\",
   "Documents": [
     {
@@ -57,6 +58,44 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\db\\recipedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+  "WorkspaceRootPath": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\userallergen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\userallergen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\allergens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\allergens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\productallergens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\productallergens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\recipeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\recipeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\enums\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:enums\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\ndimi\\onedrive\\documents\\github\\gozbichka\\gozbichkawebapp\\db\\recipedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:db\\recipedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -67,6 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -80,11 +120,40 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T11:26:01.355Z",
+=======
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RecipeProduct.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\RecipeProduct.cs",
+              "RelativeDocumentMoniker": "Models\\RecipeProduct.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\RecipeProduct.cs",
+              "RelativeToolTip": "Models\\RecipeProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T11:32:32.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductAllergens.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\ProductAllergens.cs",
+              "RelativeDocumentMoniker": "Models\\ProductAllergens.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\ProductAllergens.cs",
+              "RelativeToolTip": "Models\\ProductAllergens.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T11:31:11.605Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
               "Title": "RecipeSeasonalCategory.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\RecipeSeasonalCategory.cs",
@@ -194,12 +263,34 @@
               "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Enums\\Difficulty.cs",
               "RelativeToolTip": "Enums\\Difficulty.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+=======
+              "Title": "UserAllergen.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\UserAllergen.cs",
+              "RelativeDocumentMoniker": "Models\\UserAllergen.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\UserAllergen.cs",
+              "RelativeToolTip": "Models\\UserAllergen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T10:58:14.727Z",
+              "WhenOpened": "2026-03-27T11:29:38.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Allergens.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Allergens.cs",
+              "RelativeDocumentMoniker": "Models\\Allergens.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Allergens.cs",
+              "RelativeToolTip": "Models\\Allergens.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T11:28:50.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
               "DocumentIndex": 5,
               "Title": "Recipe.cs",
@@ -208,24 +299,67 @@
               "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
               "RelativeToolTip": "Models\\Recipe.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+=======
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T11:27:45.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Difficulty.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Enums\\Difficulty.cs",
+              "RelativeDocumentMoniker": "Enums\\Difficulty.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Enums\\Difficulty.cs",
+              "RelativeToolTip": "Enums\\Difficulty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:58:14.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "Models\\Recipe.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
+              "RelativeToolTip": "Models\\Recipe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T10:49:59.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 8,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
               "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\ErrorViewModel.cs",
+=======
+              "DocumentIndex": 7,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\ErrorViewModel.cs",
+>>>>>>> Stashed changes
               "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T10:49:47.399Z"
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 9,
 =======
               "DocumentIndex": 4,
@@ -234,6 +368,13 @@
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\DB\\RecipeDBContext.cs",
               "RelativeDocumentMoniker": "DB\\RecipeDBContext.cs",
               "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\DB\\RecipeDBContext.cs",
+=======
+              "DocumentIndex": 8,
+              "Title": "RecipeDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\DB\\RecipeDBContext.cs",
+              "RelativeDocumentMoniker": "DB\\RecipeDBContext.cs",
+              "ToolTip": "C:\\Users\\ndimi\\OneDrive\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\DB\\RecipeDBContext.cs",
+>>>>>>> Stashed changes
               "RelativeToolTip": "DB\\RecipeDBContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
