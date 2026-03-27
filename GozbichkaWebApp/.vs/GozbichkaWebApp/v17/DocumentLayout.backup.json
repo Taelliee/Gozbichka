@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\recipeseasonalcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\recipeseasonalcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,6 +38,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\models\\recipestep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:models\\recipestep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\tu\\elka\\repos\\gozbichka\\gozbichkawebapp\\enums\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|solutionrelative:enums\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB99A9A8-F9DA-4E60-8DA3-BD6787ECD292}|GozbichkaWebApp.csproj|c:\\users\\hp zbook 15 g7\\documents\\github\\gozbichka\\gozbichkawebapp\\db\\recipedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -68,6 +85,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "RecipeSeasonalCategory.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\RecipeSeasonalCategory.cs",
               "RelativeDocumentMoniker": "Models\\RecipeSeasonalCategory.cs",
@@ -89,11 +107,22 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T11:21:51.143Z",
+=======
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "Models\\Recipe.cs",
+              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
+              "RelativeToolTip": "Models\\Recipe.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T11:26:36.454Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< Updated upstream
               "Title": "History.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\History.cs",
               "RelativeDocumentMoniker": "Models\\History.cs",
@@ -102,11 +131,35 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T11:20:01.934Z",
+=======
+              "Title": "Rating.cs",
+              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Rating.cs",
+              "RelativeDocumentMoniker": "Models\\Rating.cs",
+              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\Rating.cs",
+              "RelativeToolTip": "Models\\Rating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T11:20:33.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecipeStep.cs",
+              "DocumentMoniker": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\RecipeStep.cs",
+              "RelativeDocumentMoniker": "Models\\RecipeStep.cs",
+              "ToolTip": "C:\\tu\\elka\\repos\\Gozbichka\\GozbichkaWebApp\\Models\\RecipeStep.cs",
+              "RelativeToolTip": "Models\\RecipeStep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T11:17:14.058Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+<<<<<<< Updated upstream
               "Title": "Favorites.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Favorites.cs",
               "RelativeDocumentMoniker": "Models\\Favorites.cs",
@@ -133,18 +186,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
+=======
+>>>>>>> Stashed changes
               "Title": "Difficulty.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Enums\\Difficulty.cs",
               "RelativeDocumentMoniker": "Enums\\Difficulty.cs",
               "ToolTip": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Enums\\Difficulty.cs",
               "RelativeToolTip": "Enums\\Difficulty.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T10:58:14.727Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 5,
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\Models\\Recipe.cs",
@@ -171,6 +227,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+=======
+              "DocumentIndex": 4,
+>>>>>>> Stashed changes
               "Title": "RecipeDBContext.cs",
               "DocumentMoniker": "C:\\Users\\HP ZBook 15 G7\\Documents\\GitHub\\Gozbichka\\GozbichkaWebApp\\DB\\RecipeDBContext.cs",
               "RelativeDocumentMoniker": "DB\\RecipeDBContext.cs",

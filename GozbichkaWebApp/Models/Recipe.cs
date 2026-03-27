@@ -18,5 +18,9 @@ namespace GozbichkaWebApp.Models
 
         //getimage?
 
+        public ICollection<Rating> Ratings { get; set; }
+        public ICollection<RecipeStep> RecipeSteps { get; set; }
+        public ICollection<Ingredient> Ingredients { get; set; }
+
     }
 }
