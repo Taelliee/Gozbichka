@@ -1,5 +1,7 @@
-/GozbichkaWebApp/.vs/*
-/GozbichkaWebApp/obj/*
-/GozbichkaWebApp/bin/*
+GozbichkaWebApp/.vs/*
+GozbichkaWebApp/obj/*
+GozbichkaWebApp/bin/*
+
 *.cache
 *.editorconfig
+*.dll

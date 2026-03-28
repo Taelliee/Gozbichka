@@ -5,6 +5,6 @@
         public int MealCategoryId { get; set; }
         public string Name { get; set; }
 
-        ICollection<Recipe> Recipes { get; set; }
+        public ICollection<Recipe> Recipes { get; set; }
     }
 }

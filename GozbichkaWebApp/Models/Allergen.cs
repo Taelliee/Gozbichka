@@ -1,11 +1,11 @@
 ﻿namespace GozbichkaWebApp.Models
 {
-    public class Allergens
+    public class Allergen
     {
         public int AllergenId { get; set; }
-        public int AllergenName {  get; set; }
+        public string AllergenName {  get; set; }
 
-        public ICollection<ProductAllergens> ProductAllergens { get; set; }
+        public ICollection<ProductAllergen> ProductAllergens { get; set; }
         public ICollection<UserAllergen> UserAllergens { get; set; }
     }
 }
