@@ -1,6 +1,5 @@
-/GozbichkaWebApp/.vs
-/GozbichkaWebApp/obj
-/GozbichkaWebApp/bin
-GozbichkaWebApp/obj/Debug/net8.0/GozbichkaWebApp.GeneratedMSBuildEditorConfig.editorconfig
+/GozbichkaWebApp/.vs/*
+/GozbichkaWebApp/obj/*
+/GozbichkaWebApp/bin/*
 *.cache
-
+*.editorconfig
