@@ -5,3 +5,4 @@ GozbichkaWebApp/bin/*
 *.cache
 *.editorconfig
 *.dll
+/GozbichkaWebApp/Migrations
