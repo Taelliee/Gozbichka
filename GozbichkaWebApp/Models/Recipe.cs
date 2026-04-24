@@ -10,6 +10,8 @@ namespace GozbichkaWebApp.Models
         public string ImageURL { get; set; }
         public double CookingTime { get; set; }
         public int Portions { get; set; }
+        public double Rating { get; set; }
+        public string RecipeDetails { get; set; }
 
         public int MealCategoryId { get; set; }
         public MealCategory MealCategory { get; set; }
@@ -19,11 +21,11 @@ namespace GozbichkaWebApp.Models
 
         //getimage?
 
-        public ICollection<Rating> Ratings { get; set; }
-        public ICollection<RecipeStep> RecipeSteps { get; set; }
+        //public ICollection<Rating> Ratings { get; set; }
+        //public ICollection<RecipeStep> RecipeSteps { get; set; }
         public ICollection<RecipeProduct> RecipeProducts { get; set; }
-        public ICollection<History> HistoryRecipes { get; set; }
-        public ICollection<Favorites> FavoriteRecipes { get; set; }
-        public ICollection<RecipeSeasonalCategory> RecipeSeasonalCategories { get; set; }
+        //public ICollection<History> HistoryRecipes { get; set; }
+        //public ICollection<Favorites> FavoriteRecipes { get; set; }
+        //public ICollection<RecipeSeasonalCategory> RecipeSeasonalCategories { get; set; }
     }
 }
