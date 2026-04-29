@@ -1,0 +1,56 @@
+﻿@model GozbichkaWebApp.Models.ViewModels.RefrigeratorViewModel
+
+<h2>My Refrigerator</h2>
+
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="UserId" />
+
+    <h4>Select products:</h4>
+
+    <div>
+        @foreach (var product in Model.AllProducts)
+        {
+            <div>
+                <input type="checkbox"
+                       name="SelectedProductIds"
+                       value="@product.ProductId"
+                       @(Model.SelectedProductIds.Contains(product.ProductId) ? "checked" : "") />
+                <label>@product.ProductName</label>
+            </div>
+        }
+    </div>
+
+    <button type="submit">Save Refrigerator</button>
+</form>
+
+<hr />
+
+<form asp-action="SearchRecipes" method="post">
+    <input type="hidden" asp-for="UserId" />
+
+    @foreach (var id in Model.SelectedProductIds)
+    {
+        <input type="hidden" name="SelectedProductIds" value="@id" />
+    }
+
+    <button type="submit">Find Recipes</button>
+</form>
+
+<hr />
+
+@if (Model.MatchingRecipes != null && Model.MatchingRecipes.Any())
+{
+    <h3>Matching Recipes</h3>
+
+    <div>
+        @foreach (var recipe in Model.MatchingRecipes)
+        {
+            <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+                <h4>@recipe.Title</h4>
+                <img src="@recipe.ImageURL" width="150" />
+                <p>Cooking Time: @recipe.CookingTime min</p>
+                <p>Rating: @recipe.Rating</p>
+            </div>
+        }
+    </div>
+}
