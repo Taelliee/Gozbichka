@@ -1,22 +1,225 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 0;
 }
+
+:root {
+    --gozbichka-orange: #f39c12;
+    --gozbichka-brown: #5d4037;
+    --gozbichka-teal: #26c6da;
+}
+
+/* --- Base Form Styles --- */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* --- Theme Colors --- */
+.bg-brown {
+    background-color: var(--gozbichka-brown);
+}
+
+.bg-orange {
+    background-color: var(--gozbichka-orange);
+}
+
+.text-teal {
+    color: var(--gozbichka-teal);
+}
+
+.btn-teal {
+    background-color: var(--gozbichka-teal);
+    border: none;
+}
+
+    .btn-teal:hover {
+        background-color: #00acc1;
+    }
+
+/* --- Header & Navigation --- */
+.top-bar {
+    background-color: #5d4037;
+}
+
+.nav-orange {
+    background-color: #f39c12;
+}
+
+.nav-link.active-link {
+    color: #26c6da !important;
+    border-bottom: 2px solid #26c6da;
+}
+
+.search-container {
+    border: 1px solid #26c6da;
+    background-color: #e0f7fa !important;
+}
+
+.category-select {
+    font-size: 0.9rem;
+    color: #5d4037;
+    cursor: pointer;
+}
+
+.search-container input {
+    background-color: white !important;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.divider {
+    width: 1px;
+    height: 25px;
+    background-color: #ccc;
+    margin: 0 5px;
+}
+
+.btn-search {
+    background-color: #ccc;
+    color: #333;
+    padding: 5px 12px;
+}
+
+.bi-list {
+    color: #5d4037;
+}
+
+/* --- Badges & Cards --- */
+.badge-new {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    background-color: #f39c12;
+    color: #5d4037;
+    border-radius: 50%;
+    border: 2px solid #5d4037;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.1;
+    z-index: 10;
+}
+
+.card-zoom {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+    .card-zoom:hover {
+        transform: scale(1.03);
+    }
+
+/* --- Carousels --- */
+.custom-arrow {
+    width: 50px;
+    opacity: 1;
+}
+
+    .custom-arrow span {
+        color: #5d4037;
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+.teal-arrow span {
+    color: #26c6da;
+}
+
+/* --- Footer --- */
+.footer-custom {
+    background-color: #5d4037;
+    color: #d7ccc8;
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+    .footer-links a:hover {
+        color: #f39c12;
+    }
+
+.footer-logo-circle {
+    background-color: #f39c12;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 3px solid #4e342e;
+}
+
+.footer-input {
+    background: transparent !important;
+    border: 1px solid #795548;
+    color: white !important;
+    border-radius: 0;
+}
+
+    .footer-input::placeholder {
+        color: #a1887f;
+    }
+
+.footer-submit {
+    background: transparent;
+    border: 1px solid #795548;
+    border-left: none;
+    color: white;
+    padding: 0 15px;
+}
+
+    .footer-submit:hover {
+        background-color: #f39c12;
+    }
+
+.social-icons a {
+    color: #f39c12;
+    font-size: 1.5rem;
+    transition: transform 0.2s;
+}
+
+    .social-icons a:hover {
+        transform: translateY(-3px);
+    }

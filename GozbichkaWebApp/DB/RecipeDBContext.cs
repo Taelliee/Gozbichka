@@ -26,8 +26,8 @@ namespace GozbichkaWebApp.DB
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer("Server=DESKTOP-VLMAI0N;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
-            optionsBuilder.UseSqlServer("Server=PETIAIGNATOVA\\SQLEXPRESS;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
-            //optionsBuilder.UseSqlServer("Server=localhost\SQLEXPRESS;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
+            //optionsBuilder.UseSqlServer("Server=PETIAIGNATOVA\\SQLEXPRESS;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
+            //optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

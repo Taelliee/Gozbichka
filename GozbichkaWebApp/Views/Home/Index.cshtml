@@ -1,8 +1,181 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Gozbichka - Prototype";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid p-0">
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center bg-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://placehold.co/1250x500?text=saladka" class="img-fluid shadow" alt="Salad">
+                </div>
+                <div class="col-md-6 px-5">
+                    <h1 class="text-teal">Добре дошли в Гозбичка!</h1>
+                    <p>Добре дошли в Гозбичка – уютното кътче за вдъхновение в кухнята и любов към домашно приготвената храна...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section py-5" style="background-color: #5d4037;">
+        <h2 class="text-center mb-4" style="color: #f39c12; font-family: 'Georgia', serif;">Категории</h2>
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <!-- Static Category Cards from Screenshot_5.jpg -->
+                @foreach (var cat in new[] { "Салати", "Основни", "Супи", "Десерти" })
+                {
+                    <div class="col-6 col-md-2">
+                        <div class="bg-white p-3 rounded text-center shadow-sm">
+                            <img src="https://placehold.co/150x100?text=@cat" class="img-fluid rounded mb-2" alt="@cat">
+                            <h5 class="m-0 text-dark">@cat</h5>
+                        </div>
+                    </div>
+                }
+            </div>
+            <p class="text-center mt-4 italic" style="color: #f39c12;">И още много...</p>
+        </div>
+    </section>
+    <br />
+    <!-- Seasonal Offers (Slider) -->
+    <section class="seasonal-offers py-5" style="background-color: #f39c12;">
+        <div class="container text-center">
+            <h2 style="color: #5d4037;">Сезонни предложения</h2>
+            <p style="color: #5d4037;">Вкусни идеи, вдъхновени от сезона</p>
+
+            <div id="seasonalCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center px-5 pt-4">
+                            <div class="col-md-4 col-lg-3">
+                                <div class="recipe-card bg-white rounded shadow position-relative mx-2">
+                                    <div class="badge-new">НОВА РЕЦЕПТА</div>
+                                    <img src="https://placehold.co/300x200?text=Recipe" class="card-img-top p-3" alt="Recipe">
+                                    <div class="card-body p-3 text-center">
+                                        <h5>Шоколадово суфле</h5>
+                                        <p class="small text-muted">Само за 30 минути можете да си приготвите...</p>
+                                        <button class="btn btn-info text-white w-100 btn-teal">Прегледай</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-none d-md-block">
+                                <div class="recipe-card bg-white rounded shadow p-0 mx-2">
+                                    <img src="https://placehold.co/300x200?text=Pasta" class="card-img-top p-3" alt="Recipe">
+                                    <div class="card-body p-3">
+                                        <h5>Спагети с кюфтенца</h5>
+                                        <p class="small text-muted">Само за 30 минути можете да си приготвите тези домашни...</p>
+                                        <button class="btn btn-info text-white w-100 btn-teal">Прегледай</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-none d-md-block">
+                                <div class="recipe-card bg-white rounded shadow position-relative mx-2">
+                                    <div class="badge-new">НОВА РЕЦЕПТА</div>
+                                    <img src="https://placehold.co/300x200?text=Musaka" class="card-img-top p-3" alt="Recipe">
+                                    <div class="card-body p-3">
+                                        <h5>Мусаката на Баба</h5>
+                                        <p class="small text-muted">Само за 30 минути можете да си приготвите тези домашни...</p>
+                                        <button class="btn btn-info text-white w-100 btn-teal">Прегледай</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center px-5 pt-4">
+                            <div class="col-md-3">
+                                <div class="recipe-card bg-white rounded shadow position-relative mx-2">
+                                    <div class="badge-new">НОВА РЕЦЕПТА</div>
+                                    <img src="https://placehold.co/300x200?text=Next+Recipe" class="card-img-top p-3" alt="Recipe">
+                                    <div class="card-body p-3 text-center">
+                                        <h5>Следваща Рецепта</h5>
+                                        <p class="small text-muted">Пример за прелистване с бутоните < и >.</p>
+                                        <button class="btn btn-info text-white w-100 btn-teal">Прегледай</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Arrows -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#seasonalCarousel" data-bs-slide="prev" style="width: 5%; opacity: 1;">
+                    <span style="color: #5d4037; font-size: 3rem; font-weight: bold;">&lt;</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#seasonalCarousel" data-bs-slide="next" style="width: 5%; opacity: 1;">
+                    <span style="color: #5d4037; font-size: 3rem; font-weight: bold;">&gt;</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Viewed Section -->
+    <section class="most-viewed py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="mb-5" style="color: #5d4037; font-family: 'Georgia', serif;">Най-преглежданите рецепти</h2>
+
+            <div id="mostViewedCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 px-5">
+                            @{
+                                var recipes1 = new[] {
+                                                        new { t = "Салата Цезар", c = "#ffcc80" },
+                                                        new { t = "Мусаката на Баба", c = "#e0f2f1" },
+                                                        new { t = "Яйчена салата", c = "#fff59d" },
+                                                        new { t = "Крем брюле", c = "#e0f7fa" }
+                                                        };
+                            }
+                            @foreach (var item in recipes1)
+                            {
+                                <div class="col-md-3">
+                                    <div class="p-4 rounded shadow-sm h-100 card-zoom" style="background-color: @item.c;">
+                                        <img src="https://placehold.co/200x150?text=@item.t" class="img-fluid rounded shadow-sm mb-3" alt="@item.t">
+                                        <h5 class="fw-bold">@item.t</h5>
+                                        <p class="text-muted small">Традиционна рецепта</p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 px-5">
+                            @{
+                                var recipes2 = new[] {
+                                                        new { t = "Шкембе чорба", c = "#fce4ec" },
+                                                        new { t = "Сърми", c = "#f1f8e9" },
+                                                        new { t = "Баница", c = "#fff3e0" },
+                                                        new { t = "Каварма", c = "#efebe9" }
+                                                        };
+                            }
+                            @foreach (var item in recipes2)
+                            {
+                                <div class="col-md-3">
+                                    <div class="p-4 rounded shadow-sm h-100 card-zoom" style="background-color: @item.c;">
+                                        <img src="https://placehold.co/200x150?text=@item.t" class="img-fluid rounded shadow-sm mb-3" alt="@item.t">
+                                        <h5 class="fw-bold">@item.t</h5>
+                                        <p class="text-muted small">Популярна рецепта</p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Arrows for Most Viewed -->
+                <button class="carousel-control-prev custom-arrow teal-arrow" type="button" data-bs-target="#mostViewedCarousel" data-bs-slide="prev">
+                    <span>&lt;</span>
+                </button>
+                <button class="carousel-control-next custom-arrow teal-arrow" type="button" data-bs-target="#mostViewedCarousel" data-bs-slide="next">
+                    <span>&gt;</span>
+                </button>
+            </div>
+        </div>
+    </section>
 </div>
