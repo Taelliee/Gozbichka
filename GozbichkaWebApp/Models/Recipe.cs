@@ -7,11 +7,12 @@ namespace GozbichkaWebApp.Models
     {
         public int RecipeId { get; set; }
         public string Title { get; set; }
+        public string Description { get; set; }
+        public string CookingMethod { get; set; }
         public string ImageURL { get; set; }
         public double CookingTime { get; set; }
         public int Portions { get; set; }
         public double Rating { get; set; }
-        public string RecipeDetails { get; set; }
 
         public int MealCategoryId { get; set; }
         public MealCategory MealCategory { get; set; }
