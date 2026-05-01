@@ -16,8 +16,8 @@
         <!-- Top Thin Bar (Dark Brown) -->
         <div class="top-bar py-1 px-4 d-flex justify-content-end align-items-center">
             <div class="top-links d-flex gap-3">
-                <a href="#" class="text-white text-decoration-none small"><i class="bi bi-megaphone"></i> РЕГИСТРАЦИЯ</a>
-                <a href="#" class="text-white text-decoration-none small"><i class="bi bi-person"></i> ВХОД</a>
+                <a href="#" class="text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#registerModal"><i class="bi bi-megaphone"></i> РЕГИСТРАЦИЯ</a>
+                <a href="#" class="text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bi bi-person"></i> ВХОД</a>
                 <a href="#" class="text-white text-decoration-none small"><i class="bi bi-shield-lock"></i></a>
             </div>
         </div>
@@ -87,6 +87,12 @@
             @RenderBody()
         </main>
     </div>
+
+    <!-- Login Modal -->
+    <partial name="_LoginModal" />
+
+    <!-- Register Modal -->
+    <partial name="_RegisterModal" />
 
     <footer class="footer-custom py-5 mt-5">
         <div class="container">

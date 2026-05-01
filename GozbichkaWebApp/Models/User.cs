@@ -9,7 +9,7 @@ namespace GozbichkaWebApp.Models
         public string Email { get; set; }
 
         //getimage?
-        public string IconURL { get; set; }
+        public string IconURL { get; set; } = "/images/default-user-icon.png";
 
         //more changes to password
         public string Password { get; set; }
