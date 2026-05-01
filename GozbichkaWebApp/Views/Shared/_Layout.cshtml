@@ -32,18 +32,28 @@
 
                 <!-- Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
+                    @{
+                        // This grabs the name of the current page you are on
+                        var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+                        var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+                    }
+    
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
                         <li class="nav-item">
-                            <a class="nav-link active-link me-3" href="/">Начало</a>
+                            <a class="nav-link me-3 @(currentController == "Home" && currentAction == "Index" ? "active-link" : "text-dark")"
+                               asp-controller="Home" asp-action="Index">Начало</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link me-3 text-dark" href="#">Рецепти</a>
+                            <a class="nav-link me-3 @(currentController == "Recipes" ? "active-link" : "text-dark")"
+                               asp-controller="Recipes" asp-action="Index">Рецепти</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link me-3 text-dark" href="#">Хладилник</a>
+                            <a class="nav-link me-3 @(currentController == "Refrigerator" ? "active-link" : "text-dark")"
+                               asp-controller="Refrigerator" asp-action="Index">Хладилник</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link me-3 text-dark" href="#">Контакти</a>
+                            <a class="nav-link me-3 @(currentController == "Home" && currentAction == "Contact" ? "active-link" : "text-dark")"
+                               asp-controller="Home" asp-action="Contact">Контакти</a>
                         </li>
                     </ul>
 

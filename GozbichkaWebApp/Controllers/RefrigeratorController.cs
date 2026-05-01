@@ -19,45 +19,95 @@ namespace GozbichkaWebApp.Controllers
         {
             int userId = _context.Users.Select(u => u.UserId).FirstOrDefault();
 
+            List<int> fridgeIds = new List<int>();
+            List<int> activeIds = new List<int>();
+
+            // 1. Load Fridge Products
+            if (userId > 0)
+            {
+                fridgeIds = _context.Refrigerators.Where(r => r.UserId == userId).Select(r => r.ProductId).ToList();
+            }
+            else
+            {
+                var guestFridgeCookie = Request.Cookies["GuestFridge"];
+                // FIX: Check that it doesn't equal our magic word "NONE"
+                if (!string.IsNullOrEmpty(guestFridgeCookie) && guestFridgeCookie != "NONE")
+                    fridgeIds = guestFridgeCookie.Split(',').Select(int.Parse).ToList();
+            }
+
+            // 2. Load Active State
+            if (Request.Cookies.ContainsKey("ActiveSearch"))
+            {
+                var activeStateCookie = Request.Cookies["ActiveSearch"];
+
+                // FIX: If the cookie has data AND isn't "NONE", parse the IDs
+                if (!string.IsNullOrWhiteSpace(activeStateCookie) && activeStateCookie != "NONE")
+                {
+                    activeIds = activeStateCookie.Split(',').Select(int.Parse).ToList();
+                    activeIds = activeIds.Where(id => fridgeIds.Contains(id)).ToList();
+                }
+                else
+                {
+                    // If the cookie equals "NONE", they explicitly unselected everything.
+                    activeIds = new List<int>();
+                }
+            }
+            else
+            {
+                // The cookie is completely missing (first time visiting).
+                activeIds = fridgeIds.ToList();
+            }
+
             var vm = new RefrigeratorViewModel
             {
                 UserId = userId,
                 AllProducts = _context.Products.ToList(),
-                SelectedProductIds = _context.Refrigerators
-                    .Where(r => r.UserId == userId)
-                    .Select(r => r.ProductId)
-                    .ToList()
+                FridgeProductIds = fridgeIds,
+                ActiveSearchProductIds = activeIds
             };
 
             return View("Refrigerator", vm);
         }
 
         [HttpPost]
-        public IActionResult Update(RefrigeratorViewModel model)
+        public IActionResult AutoSaveFridge(int userId, List<int> fridgeProductIds, List<int> activeSearchProductIds)
         {
-            int userId = model.UserId;
-
-            var existing = _context.Refrigerators.Where(r => r.UserId == userId);
-            _context.Refrigerators.RemoveRange(existing);
-
-            foreach (var productId in model.SelectedProductIds)
+            if (userId > 0)
             {
-                _context.Refrigerators.Add(new Refrigerator
+                var existing = _context.Refrigerators.Where(r => r.UserId == userId);
+                _context.Refrigerators.RemoveRange(existing);
+
+                if (fridgeProductIds != null)
                 {
-                    UserId = userId,
-                    ProductId = productId
-                });
+                    foreach (var id in fridgeProductIds)
+                        _context.Refrigerators.Add(new Refrigerator { UserId = userId, ProductId = id });
+                }
+                _context.SaveChanges();
             }
 
-            _context.SaveChanges();
+            var cookieOptions = new CookieOptions { Expires = DateTime.Now.AddDays(30) };
 
-            return RedirectToAction("Index");
+            // FIX: If the list has items, save them. If it's empty, save the string "NONE" instead of ""
+            string fridgeCookieValue = (fridgeProductIds != null && fridgeProductIds.Any())
+                ? string.Join(",", fridgeProductIds)
+                : "NONE";
+
+            string activeCookieValue = (activeSearchProductIds != null && activeSearchProductIds.Any())
+                ? string.Join(",", activeSearchProductIds)
+                : "NONE";
+
+            Response.Cookies.Append("GuestFridge", fridgeCookieValue, cookieOptions);
+            Response.Cookies.Append("ActiveSearch", activeCookieValue, cookieOptions);
+
+            return Ok();
         }
 
         [HttpPost]
         public IActionResult SearchRecipes(RefrigeratorViewModel model)
         {
-            if (model.SelectedProductIds == null || !model.SelectedProductIds.Any())
+            AutoSaveFridge(model.UserId, model.FridgeProductIds, model.ActiveSearchProductIds);
+
+            if (model.ActiveSearchProductIds == null || !model.ActiveSearchProductIds.Any())
             {
                 model.MatchingRecipes = new List<Recipe>();
             }
@@ -65,13 +115,11 @@ namespace GozbichkaWebApp.Controllers
             {
                 model.MatchingRecipes = _context.Recipes
                     .Include(r => r.RecipeProducts)
-                    .Where(r => r.RecipeProducts
-                        .Any(rp => model.SelectedProductIds.Contains(rp.ProductId)))
+                    .Where(r => r.RecipeProducts.Any(rp => model.ActiveSearchProductIds.Contains(rp.ProductId)))
                     .ToList();
             }
 
             model.AllProducts = _context.Products.ToList();
-
             return View("Refrigerator", model);
         }
     }
