@@ -17,7 +17,7 @@ namespace GozbichkaWebApp.Controllers
 
         public IActionResult Index()
         {
-            int userId = _context.Users.Select(u => u.UserId).FirstOrDefault();
+            int userId = HttpContext.Session.GetInt32("UserId") ?? 0;
 
             List<int> fridgeIds = new List<int>();
             List<int> activeIds = new List<int>();
@@ -105,6 +105,7 @@ namespace GozbichkaWebApp.Controllers
         [HttpPost]
         public IActionResult SearchRecipes(RefrigeratorViewModel model)
         {
+            model.UserId = HttpContext.Session.GetInt32("UserId") ?? 0;
             AutoSaveFridge(model.UserId, model.FridgeProductIds, model.ActiveSearchProductIds);
 
             if (model.ActiveSearchProductIds == null || !model.ActiveSearchProductIds.Any())

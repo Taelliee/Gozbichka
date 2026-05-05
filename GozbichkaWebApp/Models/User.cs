@@ -13,6 +13,7 @@ namespace GozbichkaWebApp.Models
 
         //more changes to password
         public string Password { get; set; }
+        public string Role { get; set; } = "User";
 
         //public ICollection<UserAllergen> UserAllergens { get; set; }
         public ICollection<Refrigerator> Refrigerators { get; set; }

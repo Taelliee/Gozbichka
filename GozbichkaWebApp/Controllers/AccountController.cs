@@ -1,4 +1,4 @@
-using GozbichkaWebApp.DB;
+п»їusing GozbichkaWebApp.DB;
 using GozbichkaWebApp.Models;
 using GozbichkaWebApp.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -9,44 +9,60 @@ namespace GozbichkaWebApp.Controllers
     public class AccountController : Controller
     {
         private readonly RecipeDBContext _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public AccountController(RecipeDBContext context)
+        public AccountController(RecipeDBContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
 
+        [HttpPost]
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (!ModelState.IsValid)
             {
-                TempData["LoginError"] = "Моля, попълнете всички полета.";
+                TempData["LoginError"] = "РњРѕР»СЏ, РїРѕРїСЉР»РЅРµС‚Рµ РІСЃРёС‡РєРё РїРѕР»РµС‚Р°.";
                 return RedirectToAction("Index", "Home");
             }
 
-            // Find user by email
+            // РќР°РјРёСЂР°РЅРµ РЅР° РїРѕС‚СЂРµР±РёС‚РµР» РїРѕ РёРјРµР№Р»
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == model.Email);
 
             if (user == null)
             {
-                TempData["LoginError"] = "Невалиден имейл или парола.";
+                TempData["LoginError"] = "РќРµРІР°Р»РёРґРµРЅ РёРјРµР№Р» РёР»Рё РїР°СЂРѕР»Р°.";
                 return RedirectToAction("Index", "Home");
             }
 
-            // TODO: Add password hashing verification
-            // For now, simple comparison (you should hash passwords in production!)
             if (user.Password != model.Password)
             {
-                TempData["LoginError"] = "Невалидна парола.";
+                TempData["LoginError"] = "РќРµРІР°Р»РёРґРЅР° РїР°СЂРѕР»Р°.";
                 return RedirectToAction("Index", "Home");
             }
 
-            // Store user info in session
+            // Standard Session Login
             HttpContext.Session.SetInt32("UserId", user.UserId);
             HttpContext.Session.SetString("UserName", user.Name);
+            HttpContext.Session.SetString("UserIcon", user.IconURL);
+            HttpContext.Session.SetString("UserRole", user.Role);
 
-            TempData["LoginSuccess"] = $"Добре дошли, {user.Name}!";
+            // --- REMEMBER ME LOGIC ---
+            if (model.RememberMe)
+            {
+                var cookieOptions = new CookieOptions
+                {
+                    Expires = DateTime.Now.AddDays(30),
+                    HttpOnly = true, // Protects from XSS attacks
+                    Secure = true    // Ensures it's only sent over HTTPS
+                };
+                Response.Cookies.Append("RememberMe_UserId", user.UserId.ToString(), cookieOptions);
+            }
+            // -------------------------
+
+            TempData["LoginSuccess"] = $"Р”РѕР±СЂРµ РґРѕС€Р»Рё, {user.Name}!";
             return RedirectToAction("Index", "Home");
         }
 
@@ -55,62 +71,114 @@ namespace GozbichkaWebApp.Controllers
         {
             if (!ModelState.IsValid)
             {
-                TempData["RegisterError"] = "Моля, попълнете всички полета.";
+                TempData["RegisterError"] = "РњРѕР»СЏ, РїРѕРїСЉР»РЅРµС‚Рµ РІСЃРёС‡РєРё РїРѕР»РµС‚Р°.";
                 return RedirectToAction("Index", "Home");
             }
 
-            // Check if passwords match
+            
             if (model.Password != model.ConfirmPassword)
             {
-                TempData["RegisterError"] = "Паролите не съвпадат.";
+                TempData["RegisterError"] = "РџР°СЂРѕР»РёС‚Рµ РЅРµ СЃСЉРІРїР°РґР°С‚.";
                 return RedirectToAction("Index", "Home");
             }
 
-            // Check if email already exists
+            
             var existingUser = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == model.Email);
 
             if (existingUser != null)
             {
-                TempData["RegisterError"] = "Този имейл вече е регистриран.";
+                TempData["RegisterError"] = "РўРѕР·Рё РёРјРµР№Р» РІРµС‡Рµ Рµ СЂРµРіРёСЃС‚СЂРёСЂР°РЅ.";
                 return RedirectToAction("Index", "Home");
             }
 
-            // Check if username already exists
+            
             var existingUserName = await _context.Users
                 .FirstOrDefaultAsync(u => u.Name == model.UserName);
 
             if (existingUserName != null)
             {
-                TempData["RegisterError"] = "Това потребителско име вече е заето.";
+                TempData["RegisterError"] = "РўРѕРІР° РїРѕС‚СЂРµР±РёС‚РµР»СЃРєРѕ РёРјРµ РІРµС‡Рµ Рµ Р·Р°РµС‚Рѕ.";
                 return RedirectToAction("Index", "Home");
             }
 
-            // Create new user
-            // TODO: Add password hashing in production!
+            
             var newUser = new User
             {
                 Email = model.Email,
                 Name = model.UserName,
-                Password = model.Password // In production, hash this!
+                Password = model.Password 
             };
 
             _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
 
-            // Automatically log in the user
+            
             HttpContext.Session.SetInt32("UserId", newUser.UserId);
             HttpContext.Session.SetString("UserName", newUser.Name);
+            HttpContext.Session.SetString("UserIcon", newUser.IconURL);
+            HttpContext.Session.SetString("UserRole", newUser.Role);
 
-            TempData["RegisterSuccess"] = $"Добре дошли, {newUser.Name}! Регистрацията е успешна.";
+
+            TempData["RegisterSuccess"] = $"Р”РѕР±СЂРµ РґРѕС€Р»Рё, {newUser.Name}! Р РµРіРёСЃС‚СЂР°С†РёСЏС‚Р° Рµ СѓСЃРїРµС€РЅР°.";
             return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
+        [HttpPost]
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-            TempData["LogoutSuccess"] = "Успешно излязохте от системата.";
+
+            // --- REMEMBER ME LOGIC (Clear the cookie on logout) ---
+            Response.Cookies.Delete("RememberMe_UserId");
+
+            TempData["LogoutSuccess"] = "РЈСЃРїРµС€РЅРѕ РёР·Р»СЏР·РѕС…С‚Рµ РѕС‚ СЃРёСЃС‚РµРјР°С‚Р°.";
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UploadProfilePicture(IFormFile profileImage)
+        {
+            int userId = HttpContext.Session.GetInt32("UserId") ?? 0;
+
+            if (userId == 0 || profileImage == null || profileImage.Length == 0)
+            {
+                TempData["LoginError"] = "РњРѕР»СЏ, РёР·Р±РµСЂРµС‚Рµ РІР°Р»РёРґРЅР° СЃРЅРёРјРєР°.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            // 1. Define where to save the image (wwwroot/images/profiles)
+            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images", "profiles");
+
+            // Ensure the folder exists
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            // 2. Create a unique file name (e.g., 5f4dcc3b5aa765d61d8327deb882cf99_myface.png)
+            string uniqueFileName = Guid.NewGuid().ToString() + "_" + profileImage.FileName;
+            string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            // 3. Save the image to the physical folder
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await profileImage.CopyToAsync(fileStream);
+            }
+
+            // 4. Update the user in the database
+            var user = await _context.Users.FindAsync(userId);
+            if (user != null)
+            {
+                user.IconURL = "/images/profiles/" + uniqueFileName;
+                await _context.SaveChangesAsync();
+
+                // Update the session so the UI changes immediately
+                HttpContext.Session.SetString("UserIcon", user.IconURL);
+            }
+
+            TempData["LoginSuccess"] = "РџСЂРѕС„РёР»РЅР°С‚Р° СЃРЅРёРјРєР° Рµ РѕР±РЅРѕРІРµРЅР° СѓСЃРїРµС€РЅРѕ!";
             return RedirectToAction("Index", "Home");
         }
     }

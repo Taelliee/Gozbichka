@@ -1,0 +1,282 @@
+﻿@model GozbichkaWebApp.Models.Recipe
+@{
+    ViewData["Title"] = "Редактирай Рецепта";
+    // Calculate hours and minutes backwards from total time
+    int hours = (int)(Model.CookingTime / 60);
+    int minutes = (int)(Model.CookingTime % 60);
+}
+
+<div class="admin-dashboard-container mx-auto mt-4 shadow-sm" style="max-width: 900px;">
+    <!-- Header -->
+    <div class="admin-header p-4 text-center">
+        <h2 class="text-white fw-bold m-0" style="font-family: 'Georgia', serif;">Редактиране: @Model.Title</h2>
+    </div>
+
+    <!-- Form Section -->
+    <div class="admin-body p-5">
+        <form asp-controller="Admin" asp-action="EditRecipe" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="RecipeId" value="@Model.RecipeId" />
+            <input type="hidden" name="ExistingImageURL" value="@Model.ImageURL" />
+
+            <div class="mb-4">
+                <label class="form-label fw-bold small text-brown">Заглавие</label>
+                <input type="text" name="Title" class="form-control form-control-line" value="@Model.Title" required>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold small text-brown">Категория</label>
+                    <select name="MealCategoryId" class="form-select form-control-rounded" required>
+                        @foreach (var category in ViewBag.Categories)
+                        {
+                            if (category.MealCategoryId == Model.MealCategoryId) { <option value="@category.MealCategoryId" selected>@category.Name</option> }
+                            else { <option value="@category.MealCategoryId">@category.Name</option> }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold small text-brown">Трудност</label>
+                    <select name="DifficultyId" class="form-select form-control-rounded" required>
+                        @foreach (var diff in ViewBag.Difficulties)
+                        {
+                            if (diff.DifficultyId == Model.DifficultyId) { <option value="@diff.DifficultyId" selected>@diff.DifficultyType</option> }
+                            else { <option value="@diff.DifficultyId">@diff.DifficultyType</option> }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold small text-brown d-block">Време за готвене</label>
+                <div class="d-flex gap-3" style="max-width: 300px;">
+                    <input type="number" name="CookTimeMinutes" class="form-control form-control-rounded" value="@minutes" placeholder="Минути">
+                    <input type="number" name="CookTimeHours" class="form-control form-control-rounded" value="@hours" placeholder="Часове">
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <label class="form-label fw-bold small text-brown">Порции</label>
+                    <input type="number" name="Portions" class="form-control form-control-rounded" value="@Model.Portions" min="1" required>
+                </div>
+                <div class="col-md-9">
+                    <label class="form-label fw-bold small text-brown">Добави продукти</label>
+                    <!-- The Input Row -->
+                    <div class="d-flex gap-2 mb-2">
+                        
+                        <!-- Product Selection Wrapper (Locks the width for Select2) -->
+                        <div style="flex: 4; min-width: 0;">
+                            <select id="productSelect" class="form-select form-control-rounded" style="width: 100%;">
+                                <option value="">Избери продукт...</option>
+                                @foreach (var product in ViewBag.Products)
+                                {
+                                    <option value="@product.ProductId">@product.ProductName</option>
+                                }
+                            </select>
+                        </div>
+
+                        <!-- Quantity Wrapper -->
+                        <div style="flex: 2; min-width: 70px;">
+                            <input type="number" id="productQuantity" class="form-control form-control-rounded w-100" placeholder="Кол." min="0.1" step="0.1">
+                        </div>
+
+                        <!-- Unit Wrapper -->
+                        <div style="flex: 2; min-width: 80px;">
+                            <select id="productUnit" class="form-select form-control-rounded w-100">
+                                <option value="бр.">бр.</option>
+                                <option value="ч. л.">ч. л.</option>
+                                <option value="с. л.">с. л.</option>
+                                <option value="ч. ч.">ч. ч.</option>
+                                <option value="к. ч.">к. ч.</option>
+                                <option value="гр.">гр.</option>
+                                <option value="кг.">кг.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="л.">л.</option>
+                                <option value="щипка/и">щипка/и</option>
+                            </select>
+                        </div>
+
+                        <!-- Button Wrapper -->
+                        <div>
+                            <button type="button" id="addProductBtn" class="btn text-white fw-bold px-3 shadow-sm h-100" style="background-color: #26a69a; border-radius: 12px; font-size: 1.2rem; line-height: 1;">+</button>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Pre-loaded Products List -->
+                    <div id="selectedProductsList" class="d-flex flex-column gap-2 mt-3">
+                        @{ int index = 0; }
+                        @if(Model.RecipeProducts != null) {
+                            foreach(var rp in Model.RecipeProducts) {
+                                <div class="d-flex justify-content-between align-items-center bg-white p-2 px-3 border rounded shadow-sm item-row" style="border-color: #aab7b8;">
+                                    <div><i class="bi bi-check-circle-fill text-teal me-2"></i><span class="fw-bold text-brown">@rp.Product.ProductName</span><span class="text-muted ms-2">- @rp.Quantity @rp.Unit</span></div>
+                                    <button type="button" class="btn btn-sm btn-danger rounded-circle remove-btn" onclick="this.parentElement.remove()" style="width: 25px; height: 25px; padding: 0; display: flex; align-items: center; justify-content: center;"><i class="bi bi-x"></i></button>
+                                    <input type="hidden" name="RecipeProducts[@index].ProductId" value="@rp.ProductId">
+                                    <input type="hidden" name="RecipeProducts[@index].Quantity" value="@rp.Quantity">
+                                    <input type="hidden" name="RecipeProducts[@index].Unit" value="@rp.Unit">
+                                </div>
+                                index++;
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold small text-brown">Описание</label>
+                <textarea name="Description" class="form-control form-control-rounded" rows="3">@Model.Description</textarea>
+            </div>
+            <div class="mb-4">
+                <label class="form-label fw-bold small text-brown">Метод на приготвяне</label>
+                <textarea name="Method" class="form-control form-control-rounded" rows="4">@Model.CookingMethod</textarea>
+            </div>
+
+            <div class="mb-5">
+                <label class="form-label fw-bold small text-brown d-block">Снимка (Качете нова, за да замените старата)</label>
+                <div class="d-flex align-items-center gap-3">
+                    <label for="recipeImage" class="btn bg-white text-dark-brown border border-secondary rounded-pill px-4 py-1 small mb-0" style="cursor: pointer;">
+                        Качи снимка <span class="ms-2">+</span>
+                    </label>
+                    <input type="file" id="recipeImage" name="Image" class="d-none" accept="image/*">
+                    <div id="imagePreviewContainer" class="d-flex align-items-center gap-2">
+                        <img id="imagePreview" src="@Model.ImageURL" alt="Preview" class="rounded shadow-sm" style="width: 60px; height: 60px; object-fit: cover; border: 2px solid #26a69a;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <button type="submit" class="btn text-white fw-bold px-5 py-2 fs-5 shadow-sm" style="background-color: #f89c1e; border-radius: 25px; width: 300px;">
+                    Запази Промените
+                </button>
+                <a href="/Admin/Dashboard" class="d-block mt-3 text-brown fw-bold text-decoration-none">Отказ</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Select2 CSS for Searchable Dropdowns -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<style>
+    /* Colors */
+    .admin-header { background-color: #5d4037; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+    .admin-body { background-color: #d1f2eb; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
+    .text-brown { color: #5d4037; }
+    .text-teal { color: #26a69a; }
+    .bg-teal { background-color: #26a69a; }
+
+    /* Tabs */
+    .admin-tab { border-radius: 8px; }
+    .tab-active { background-color: #d1f2eb; color: #5d4037; border: 2px solid #d1f2eb; }
+    .tab-active:hover { background-color: #bce8e0; color: #5d4037; }
+    .tab-inactive { background-color: #f5b041; color: #5d4037; border: 2px solid #f5b041; }
+    .tab-inactive:hover { background-color: #e67e22; color: white; }
+
+    /* Form Inputs */
+    .form-control-line {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #5d4037;
+        border-radius: 0;
+        padding-left: 0;
+    }
+    .form-control-line:focus {
+        background: transparent;
+        box-shadow: none;
+        border-color: #26a69a;
+    }
+    .form-control-rounded {
+        border-radius: 12px;
+        border: 1px solid #aab7b8;
+    }
+    .form-control-rounded:focus {
+        border-color: #26a69a;
+        box-shadow: 0 0 0 0.25rem rgba(38, 166, 154, 0.25);
+    }
+
+    /* Select2 Custom Styling to Match Your Theme */
+    .select2-container .select2-selection--single {
+        height: 38px !important;
+        border-radius: 12px !important;
+        border: 1px solid #aab7b8 !important;
+        display: flex !important;
+        align-items: center !important;
+        padding-left: 0.375rem;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: #5d4037 !important;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 36px !important;
+    }
+    .select2-container--default .select2-selection--single:focus,
+    .select2-container--open .select2-selection--single {
+        border-color: #26a69a !important;
+        box-shadow: 0 0 0 0.25rem rgba(38, 166, 154, 0.25) !important;
+        outline: none;
+    }
+</style>
+
+@section Scripts {
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // --- INITIALIZE SEARCHABLE DROPDOWNS ---
+            if (window.jQuery) {
+                $('select[name="MealCategoryId"]').select2({ width: '100%' });
+                $('#productSelect').select2({ width: '100%' });
+            }
+            // ---------------------------------------
+
+            const addBtn = document.getElementById('addProductBtn');
+            const productSelect = document.getElementById('productSelect');
+            const quantityInput = document.getElementById('productQuantity');
+            const unitSelect = document.getElementById('productUnit');
+            const listContainer = document.getElementById('selectedProductsList');
+            
+            let productIndex = @(Model.RecipeProducts?.Count ?? 0);
+
+            addBtn.addEventListener('click', function () {
+                const productId = productSelect.value;
+                const productName = productSelect.options[productSelect.selectedIndex]?.text;
+                const quantity = quantityInput.value;
+                const unit = unitSelect.value;
+
+                if (!productId || !quantity) { alert('Моля, изберете продукт и въведете количество.'); return; }
+
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'd-flex justify-content-between align-items-center bg-white p-2 px-3 border rounded shadow-sm item-row';
+                itemDiv.style.borderColor = '#aab7b8';
+                itemDiv.innerHTML = `
+                    <div><i class="bi bi-check-circle-fill text-teal me-2"></i><span class="fw-bold text-brown">${productName}</span><span class="text-muted ms-2">- ${quantity} ${unit}</span></div>
+                    <button type="button" class="btn btn-sm btn-danger rounded-circle remove-btn" onclick="this.parentElement.remove()" style="width: 25px; height: 25px; padding: 0; display: flex; align-items: center; justify-content: center;"><i class="bi bi-x"></i></button>
+                    <input type="hidden" name="RecipeProducts[${productIndex}].ProductId" value="${productId}">
+                    <input type="hidden" name="RecipeProducts[${productIndex}].Quantity" value="${quantity}">
+                    <input type="hidden" name="RecipeProducts[${productIndex}].Unit" value="${unit}">
+                `;
+                listContainer.appendChild(itemDiv);
+                
+                productSelect.value = ''; 
+                quantityInput.value = ''; 
+                unitSelect.value = 'бр.'; 
+                
+                // VISUAL RESET FOR SELECT2 SEARCH BOX
+                if (window.jQuery) { $(productSelect).trigger('change'); }
+                
+                productIndex++;
+            });
+
+            // Image Preview Logic
+            document.getElementById('recipeImage').addEventListener('change', function () {
+                const file = this.files[0];
+                if (file) {
+                    document.getElementById('imagePreview').src = URL.createObjectURL(file);
+                    document.getElementById('imageFileName').textContent = file.name;
+                }
+            });
+        });
+    </script>
+}
