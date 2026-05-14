@@ -138,17 +138,17 @@
                         <div class="row g-4 px-5">
                             @{
                                 var recipes1 = new[] {
-                                                        new { t = "Салата Цезар", c = "Salad_Caesar.jpg" },
-                                                        new { t = "Мусаката на Баба", c = "Moussaka.webp" },
-                                                        new { t = "Яйчена салата", c = "qichena.jpg" },
-                                                        new { t = "Крем брюле", c = "Creme_Brulee.jpg" }
+                                                        new { t = "Салата Цезар", c = "Salad_Caesar.jpg", b = "#ffbf69" },
+                                                        new { t = "Мусаката на Баба", c = "Moussaka.webp", b = "#b1e1dd" },
+                                                        new { t = "Яйчена салата", c = "qichena.jpg", b = "#ffbf69" },
+                                                        new { t = "Крем брюле", c = "Creme_Brulee.jpg", b = "#b1e1dd" }
                                                         };
                             }
                             @foreach (var item in recipes1)
                             {
                                 <div class="col-md-3">
-                                    <div class="p-4 rounded shadow-sm h-100 card-zoom" style="background-color: @item.c;">
-                                        <img src="~/images/@item.c" class="img-fluid rounded shadow-sm mb-3" style="height: 200px; width: 100%; object-fit: cover;">
+                                    <div class="p-4 rounded shadow-sm h-100 card-zoom" style="background-color: @item.b;">
+                                        <img src="~/images/@item.c" class="img-fluid rounded shadow-sm mb-3" style="height: 150px; width: 100%; object-fit: cover;">
                                         <h5 class="fw-bold">@item.t</h5>
                                         <p class="text-muted small">Традиционна рецепта</p>
                                     </div>
@@ -161,17 +161,17 @@
                         <div class="row g-4 px-5">
                             @{
                                 var recipes2 = new[] {
-                                                        new { t = "Шкембе чорба", c = "Shkembe.webp" },
-                                                        new { t = "Сърми", c = "Sarmi.jpg" },
-                                                        new { t = "Баница", c = "Banitsa.jpg" },
-                                                        new { t = "Каварма", c = "Kavarma.png" }
+                                                        new { t = "Шкембе чорба", c = "Shkembe.webp", b = "#ffbf69" },
+                                                        new { t = "Сърми", c = "Sarmi.jpg", b = "#b1e1dd" },
+                                                        new { t = "Баница", c = "Banitsa.jpg", b = "#ffbf69" },
+                                                        new { t = "Каварма", c = "Kavarma.png", b = "#b1e1dd" }
                                                         };
                             }
                             @foreach (var item in recipes2)
                             {
                                 <div class="col-md-3">
-                                    <div class="p-4 rounded shadow-sm h-100 card-zoom" style="background-color: @item.c;">
-                                        <img src="~/images/@item.c" class="img-fluid rounded shadow-sm mb-3" style="height: 200px; width: 100%; object-fit: cover;">
+                                    <div class="p-4 rounded shadow-sm h-100 card-zoom" style="background-color: @item.b;">
+                                        <img src="~/images/@item.c" class="img-fluid rounded shadow-sm mb-3" style="height: 150px; width: 100%; object-fit: cover;">
                                         <h5 class="fw-bold">@item.t</h5>
                                         <p class="text-muted small">Популярна рецепта</p>
                                     </div>

@@ -28,7 +28,7 @@
                     @if (Context.Session.GetString("UserRole") == "Admin")
                     {
                         <a href="/Admin/Dashboard" class="text-white text-decoration-none small me-2" title="Админ Панел">
-                            <i class="bi bi-shield-lock-fill"></i>
+                            <i class="bi bi-shield-lock-fill" style="color: #2ec4b6"></i>
                         </a>
                     }
 
@@ -38,14 +38,14 @@
                     </span>
 
                     <form asp-controller="Account" asp-action="Logout" method="post" class="m-0">
-                        <button type="submit" class="btn btn-link text-white text-decoration-none small p-0"><i class="bi bi-box-arrow-right"></i> ИЗХОД</button>
+                        <button type="submit" class="btn btn-link text-white text-decoration-none small p-0"><i class="bi bi-box-arrow-right" style="color: #2ec4b6"></i> ИЗХОД</button>
                     </form>
                 }
                 else
                 {
                     <!-- Guest links (Notice the shield is gone from here!) -->
-                    <a href="#" class="text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#registerModal"><i class="bi bi-megaphone"></i> РЕГИСТРАЦИЯ</a>
-                    <a href="#" class="text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bi bi-person"></i> ВХОД</a>
+                    <a href="#" class="text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#registerModal"><i class="bi bi-megaphone" style="color: #2ec4b6"></i> РЕГИСТРАЦИЯ</a>
+                    <a href="#" class="text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bi bi-person" style="color: #2ec4b6"></i> ВХОД</a>
                 }
             </div>
         </div>

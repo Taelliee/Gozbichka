@@ -67,7 +67,7 @@ body {
 }
 
 .nav-link.active-link {
-    color: #26c6da !important;
+    color: #000000 !important;
     border-bottom: 2px solid #26c6da;
 }
 
