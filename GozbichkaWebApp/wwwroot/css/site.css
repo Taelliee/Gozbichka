@@ -12,6 +12,7 @@ html {
 
 body {
     margin-bottom: 0;
+    background-color: #fff3e4;
 }
 
 :root {
@@ -58,11 +59,11 @@ body {
 
 /* --- Header & Navigation --- */
 .top-bar {
-    background-color: #5d4037;
+    background-color: #61493c;
 }
 
 .nav-orange {
-    background-color: #f39c12;
+    background-color: #ff9f1c;
 }
 
 .nav-link.active-link {
@@ -95,7 +96,6 @@ body {
 }
 
 .btn-search {
-    background-color: #ccc;
     color: #333;
     padding: 5px 12px;
 }
@@ -111,10 +111,10 @@ body {
     left: -20px;
     width: 80px;
     height: 80px;
-    background-color: #f39c12;
-    color: #5d4037;
+    background-color: #ffbf69;
+    color: #61493c;
     border-radius: 50%;
-    border: 2px solid #5d4037;
+    border: 3px solid #61493c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,3 +213,9 @@ body {
     .social-icons a:hover {
         transform: translateY(-3px);
     }
+
+.navbar-search-select {
+    padding-right: 35px !important;
+    min-width: 175px !important;
+    text-overflow: ellipsis;
+}

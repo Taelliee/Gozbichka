@@ -4,7 +4,7 @@
 
 <div class="container-fluid p-0">
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center bg-white py-5">
+    <section class="hero-section d-flex align-items-center bg-#fff3e4 py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -23,27 +23,36 @@
     </section>
 
     <!-- Categories Section -->
-    <section class="categories-section py-5" style="background-color: #5d4037;">
-        <h2 class="text-center mb-4" style="color: #f39c12; font-family: 'Georgia', serif;">Категории</h2>
+    <section class="categories-section py-5" style="background-color: #61493c;">
+        <h2 class="text-center mb-4" style="color: #ffbf69; font-family: 'Georgia', serif;">Категории</h2>
         <div class="container">
             <div class="row g-4 justify-content-center">
-                <!-- Static Category Cards from Screenshot_5.jpg -->
-                @foreach (var cat in new[] { "Салати", "Основни", "Супи", "Десерти" })
+                @{
+                    // Define the categories and their exact image filenames
+                    var categories = new[] {
+                    new { Name = "Салати", ImageFile = "Salad_Caesar.jpg" },
+                    new { Name = "Основни", ImageFile = "MainDish.jpg" },
+                    new { Name = "Супи", ImageFile = "Soup.jpeg" },
+                    new { Name = "Десерти", ImageFile = "Dessert.jpg" }
+                };
+                }
+
+                @foreach (var cat in categories)
                 {
                     <div class="col-6 col-md-2">
-                        <div class="bg-white p-3 rounded text-center shadow-sm">
-                            <img src="https://placehold.co/150x100?text=@cat" class="img-fluid rounded mb-2" alt="@cat">
-                            <h5 class="m-0 text-dark">@cat</h5>
+                        <div class="p-3 rounded text-center shadow-sm" style="background-color: #fff3e4">
+                            <img src="~/images/@cat.ImageFile" class="img-fluid rounded mb-2" alt="@cat.Name" style="width: 150px; height: 100px; object-fit: cover;">
+                            <h5 class="m-0" style="color: #61493c">@cat.Name</h5>
                         </div>
                     </div>
                 }
             </div>
-            <p class="text-center mt-4 italic" style="color: #f39c12;">И още много...</p>
+            <p class="text-center mt-4" style="color: #ffbf69; font-style: italic">И още много...</p>
         </div>
     </section>
     <br />
     <!-- Seasonal Offers (Slider) -->
-    <section class="seasonal-offers py-5" style="background-color: #f39c12;">
+    <section class="seasonal-offers py-5" style="background-color: #ff9f1c;">
         <div class="container text-center">
             <h2 style="color: #5d4037;">Сезонни предложения</h2>
             <p style="color: #5d4037;">Вкусни идеи, вдъхновени от сезона</p>
@@ -56,7 +65,7 @@
                             <div class="col-md-3 d-none d-md-block">
                                 <div class="recipe-card bg-white rounded shadow position-relative mx-2">
                                     <div class="badge-new">НОВА РЕЦЕПТА</div>
-                                    <img src="https://placehold.co/300x200?text=Recipe" class="card-img-top p-3" alt="Recipe">
+                                    <img src="~/images/Chocolate_Souffle.jpg" class="card-img-top p-3" style="height: 200px; width: 100%; object-fit: cover;">
                                     <div class="card-body p-3 text-center">
                                         <h5>Шоколадово суфле</h5>
                                         <p class="small text-muted">Само за 30 минути можете да си приготвите...</p>
@@ -66,10 +75,10 @@
                             </div>
                             <div class="col-md-3 d-none d-md-block">
                                 <div class="recipe-card bg-white rounded shadow position-relative mx-2">
-                                    <img src="https://placehold.co/300x200?text=Pasta" class="card-img-top p-3" alt="Recipe">
+                                    <img src="~/images/Spaghetti.webp" class="card-img-top p-3" style="height: 200px; width: 100%; object-fit: cover;">
                                     <div class="card-body p-3">
                                         <h5>Спагети с кюфтенца</h5>
-                                        <p class="small text-muted">Само за 30 минути можете да си приготвите тези домашни...</p>
+                                        <p class="small text-muted">Само за 30 минути можете да си приготвите...</p>
                                         <button class="btn btn-info text-white w-100 btn-teal">Прегледай</button>
                                     </div>
                                 </div>
@@ -77,10 +86,10 @@
                             <div class="col-md-3 d-none d-md-block">
                                 <div class="recipe-card bg-white rounded shadow position-relative mx-2">
                                     <div class="badge-new">НОВА РЕЦЕПТА</div>
-                                    <img src="https://placehold.co/300x200?text=Musaka" class="card-img-top p-3" alt="Recipe">
+                                    <img src="~/images/Moussaka.webp" class="card-img-top p-3" style="height: 200px; width: 100%; object-fit: cover;">
                                     <div class="card-body p-3">
                                         <h5>Мусаката на Баба</h5>
-                                        <p class="small text-muted">Само за 30 минути можете да си приготвите тези домашни...</p>
+                                        <p class="small text-muted">Само за 30 минути можете да си приготвите...</p>
                                         <button class="btn btn-info text-white w-100 btn-teal">Прегледай</button>
                                     </div>
                                 </div>
@@ -94,10 +103,10 @@
                             <div class="col-md-3">
                                 <div class="recipe-card bg-white rounded shadow position-relative mx-2">
                                     <div class="badge-new">НОВА РЕЦЕПТА</div>
-                                    <img src="https://placehold.co/300x200?text=Next+Recipe" class="card-img-top p-3" alt="Recipe">
+                                    <img src="~/images/Pizza.jpg" class="card-img-top p-3" style="height: 200px; width: 100%; object-fit: cover;">
                                     <div class="card-body p-3 text-center">
-                                        <h5>Следваща Рецепта</h5>
-                                        <p class="small text-muted">Пример за прелистване с бутоните < и >.</p>
+                                        <h5>Пица Маргарита</h5>
+                                        <p class="small text-muted">Само за 30 минути можете да си приготвите...</p>
                                         <button class="btn btn-info text-white w-100 btn-teal">Прегледай</button>
                                     </div>
                                 </div>
@@ -118,7 +127,7 @@
     </section>
 
     <!-- Most Viewed Section -->
-    <section class="most-viewed py-5 bg-white">
+    <section class="most-viewed py-5" style="background-color: #fff3e4">
         <div class="container text-center">
             <h2 class="mb-5" style="color: #5d4037; font-family: 'Georgia', serif;">Най-преглежданите рецепти</h2>
 
@@ -129,17 +138,17 @@
                         <div class="row g-4 px-5">
                             @{
                                 var recipes1 = new[] {
-                                                        new { t = "Салата Цезар", c = "#ffcc80" },
-                                                        new { t = "Мусаката на Баба", c = "#e0f2f1" },
-                                                        new { t = "Яйчена салата", c = "#fff59d" },
-                                                        new { t = "Крем брюле", c = "#e0f7fa" }
+                                                        new { t = "Салата Цезар", c = "Salad_Caesar.jpg" },
+                                                        new { t = "Мусаката на Баба", c = "Moussaka.webp" },
+                                                        new { t = "Яйчена салата", c = "qichena.jpg" },
+                                                        new { t = "Крем брюле", c = "Creme_Brulee.jpg" }
                                                         };
                             }
                             @foreach (var item in recipes1)
                             {
                                 <div class="col-md-3">
                                     <div class="p-4 rounded shadow-sm h-100 card-zoom" style="background-color: @item.c;">
-                                        <img src="https://placehold.co/200x150?text=@item.t" class="img-fluid rounded shadow-sm mb-3" alt="@item.t">
+                                        <img src="~/images/@item.c" class="img-fluid rounded shadow-sm mb-3" style="height: 200px; width: 100%; object-fit: cover;">
                                         <h5 class="fw-bold">@item.t</h5>
                                         <p class="text-muted small">Традиционна рецепта</p>
                                     </div>
@@ -152,17 +161,17 @@
                         <div class="row g-4 px-5">
                             @{
                                 var recipes2 = new[] {
-                                                        new { t = "Шкембе чорба", c = "#fce4ec" },
-                                                        new { t = "Сърми", c = "#f1f8e9" },
-                                                        new { t = "Баница", c = "#fff3e0" },
-                                                        new { t = "Каварма", c = "#efebe9" }
+                                                        new { t = "Шкембе чорба", c = "Shkembe.webp" },
+                                                        new { t = "Сърми", c = "Sarmi.jpg" },
+                                                        new { t = "Баница", c = "Banitsa.jpg" },
+                                                        new { t = "Каварма", c = "Kavarma.png" }
                                                         };
                             }
                             @foreach (var item in recipes2)
                             {
                                 <div class="col-md-3">
                                     <div class="p-4 rounded shadow-sm h-100 card-zoom" style="background-color: @item.c;">
-                                        <img src="https://placehold.co/200x150?text=@item.t" class="img-fluid rounded shadow-sm mb-3" alt="@item.t">
+                                        <img src="~/images/@item.c" class="img-fluid rounded shadow-sm mb-3" style="height: 200px; width: 100%; object-fit: cover;">
                                         <h5 class="fw-bold">@item.t</h5>
                                         <p class="text-muted small">Популярна рецепта</p>
                                     </div>
