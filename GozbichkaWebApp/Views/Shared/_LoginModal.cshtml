@@ -7,28 +7,35 @@
 
                 <h2 class="text-center mb-4 fw-bold">Вход</h2>
 
-                <div class="alert alert-warning d-flex align-items-center mb-4" role="alert">
-                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                    <small>Попълнете Вашите данни, за да влезете в профила си</small>
-                </div>
+                @if (TempData["LoginError"] != null)
+                {
+                    <div class="alert alert-danger d-flex align-items-center mb-4" role="alert">
+                        <i class="bi bi-x-circle-fill me-2"></i>
+                        <small>@TempData["LoginError"]</small>
+                    </div>
+                }
 
-                <form id="loginForm" asp-controller="Account" asp-action="Login" method="post">
+                <form id="loginForm" asp-controller="Account" asp-action="Login" method="post" novalidate autocomplete="off">
+
+                    <input type="text" style="display:none" tabindex="-1" aria-hidden="true" autocomplete="username">
+                    <input type="password" style="display:none" tabindex="-1" aria-hidden="true" autocomplete="current-password">
+
                     <div class="mb-3">
-                        <label for="loginEmail" class="form-label fw-semibold">Email</label>
-                        <input type="email" class="form-control" id="loginEmail" name="Email" required>
+                        <label for="loginUserName" class="form-label fw-semibold">Потребителско име</label>
+                        <input type="text" class="form-control" id="loginUserName" name="UserName" autocomplete="off">
+                        <div class="field-error text-danger small mt-1" id="loginUserNameError"></div>
                     </div>
 
                     <div class="mb-3">
                         <label for="loginPassword" class="form-label fw-semibold">Парола</label>
-                        <input type="password" class="form-control" id="loginPassword" name="Password" required>
+                        <input type="password" class="form-control" id="loginPassword" name="Password" autocomplete="current-password">
+                        <div class="field-error text-danger small mt-1" id="loginPasswordError"></div>
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="rememberMe" name="RememberMe" value="true">
-                            <label class="form-check-label" for="rememberMe">
-                                Запомни ме
-                            </label>
+                            <label class="form-check-label" for="rememberMe">Запомни ме</label>
                         </div>
                         <a href="#" class="text-decoration-none text-warning">Забравена парола</a>
                     </div>
@@ -43,6 +50,48 @@
         </div>
     </div>
 </div>
+
+@if (TempData["LoginError"] != null)
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new bootstrap.Modal(document.getElementById('loginModal')).show();
+        });
+    </script>
+}
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        let valid = true;
+
+        const userName = document.getElementById('loginUserName');
+        const password = document.getElementById('loginPassword');
+
+        clearLoginErrors();
+
+        if (!userName.value.trim()) {
+            showLoginError('loginUserNameError', userName, 'Потребителското име е задължително.');
+            valid = false;
+        }
+
+        if (!password.value) {
+            showLoginError('loginPasswordError', password, 'Паролата е задължителна.');
+            valid = false;
+        }
+
+        if (!valid) e.preventDefault();
+    });
+
+    function showLoginError(errorId, input, message) {
+        document.getElementById(errorId).textContent = message;
+        input.classList.add('is-invalid');
+    }
+
+    function clearLoginErrors() {
+        document.querySelectorAll('#loginForm .field-error').forEach(el => el.textContent = '');
+        document.querySelectorAll('#loginForm .form-control').forEach(el => el.classList.remove('is-invalid'));
+    }
+</script>
 
 <style>
     #loginModal .modal-content {
@@ -67,9 +116,7 @@
         box-shadow: 0 0 0 0.25rem rgba(248, 161, 70, 0.25);
     }
 
-    #loginModal .alert-warning {
-        background-color: #fff3cd;
-        border-color: #ffc107;
-        color: #856404;
+    #loginModal .form-control.is-invalid {
+        border-color: #dc3545;
     }
 </style>

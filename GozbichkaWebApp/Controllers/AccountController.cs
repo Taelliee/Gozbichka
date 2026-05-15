@@ -18,49 +18,40 @@ namespace GozbichkaWebApp.Controllers
         }
 
         [HttpPost]
-        [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (!ModelState.IsValid)
             {
-                TempData["LoginError"] = "Моля, попълнете всички полета.";
+                TempData["LoginError"] = string.Join(" ", ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage));
                 return RedirectToAction("Index", "Home");
             }
 
-            // Намиране на потребител по имейл
             var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == model.Email);
+                .FirstOrDefaultAsync(u => u.Name == model.UserName);
 
-            if (user == null)
+            if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.Password))
             {
-                TempData["LoginError"] = "Невалиден имейл или парола.";
+                TempData["LoginError"] = "Невалидно потребителско име или парола.";
                 return RedirectToAction("Index", "Home");
             }
 
-            if (user.Password != model.Password)
-            {
-                TempData["LoginError"] = "Невалидна парола.";
-                return RedirectToAction("Index", "Home");
-            }
-
-            // Standard Session Login
             HttpContext.Session.SetInt32("UserId", user.UserId);
             HttpContext.Session.SetString("UserName", user.Name);
             HttpContext.Session.SetString("UserIcon", user.IconURL);
             HttpContext.Session.SetString("UserRole", user.Role);
 
-            // --- REMEMBER ME LOGIC ---
             if (model.RememberMe)
             {
                 var cookieOptions = new CookieOptions
                 {
                     Expires = DateTime.Now.AddDays(30),
-                    HttpOnly = true, // Protects from XSS attacks
-                    Secure = true    // Ensures it's only sent over HTTPS
+                    HttpOnly = true,
+                    Secure = true
                 };
                 Response.Cookies.Append("RememberMe_UserId", user.UserId.ToString(), cookieOptions);
             }
-            // -------------------------
 
             TempData["LoginSuccess"] = $"Добре дошли, {user.Name}!";
             return RedirectToAction("Index", "Home");
@@ -71,18 +62,12 @@ namespace GozbichkaWebApp.Controllers
         {
             if (!ModelState.IsValid)
             {
-                TempData["RegisterError"] = "Моля, попълнете всички полета.";
+                TempData["RegisterError"] = string.Join(" ", ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage));
                 return RedirectToAction("Index", "Home");
             }
 
-            
-            if (model.Password != model.ConfirmPassword)
-            {
-                TempData["RegisterError"] = "Паролите не съвпадат.";
-                return RedirectToAction("Index", "Home");
-            }
-
-            
             var existingUser = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == model.Email);
 
@@ -92,7 +77,6 @@ namespace GozbichkaWebApp.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            
             var existingUserName = await _context.Users
                 .FirstOrDefaultAsync(u => u.Name == model.UserName);
 
@@ -102,37 +86,30 @@ namespace GozbichkaWebApp.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            
             var newUser = new User
             {
                 Email = model.Email,
                 Name = model.UserName,
-                Password = model.Password 
+                Password = BCrypt.Net.BCrypt.HashPassword(model.Password)
             };
 
             _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
 
-            
             HttpContext.Session.SetInt32("UserId", newUser.UserId);
             HttpContext.Session.SetString("UserName", newUser.Name);
             HttpContext.Session.SetString("UserIcon", newUser.IconURL);
             HttpContext.Session.SetString("UserRole", newUser.Role);
-
 
             TempData["RegisterSuccess"] = $"Добре дошли, {newUser.Name}! Регистрацията е успешна.";
             return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
-        [HttpPost]
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-
-            // --- REMEMBER ME LOGIC (Clear the cookie on logout) ---
             Response.Cookies.Delete("RememberMe_UserId");
-
             TempData["LogoutSuccess"] = "Успешно излязохте от системата.";
             return RedirectToAction("Index", "Home");
         }
@@ -148,37 +125,27 @@ namespace GozbichkaWebApp.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            // 1. Define where to save the image (wwwroot/images/profiles)
             string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images", "profiles");
 
-            // Ensure the folder exists
             if (!Directory.Exists(uploadsFolder))
-            {
                 Directory.CreateDirectory(uploadsFolder);
-            }
 
-            // 2. Create a unique file name (e.g., 5f4dcc3b5aa765d61d8327deb882cf99_myface.png)
             string uniqueFileName = Guid.NewGuid().ToString() + "_" + profileImage.FileName;
             string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-            // 3. Save the image to the physical folder
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
                 await profileImage.CopyToAsync(fileStream);
             }
 
-            // 4. Update the user in the database
             var user = await _context.Users.FindAsync(userId);
             if (user != null)
             {
                 user.IconURL = "/images/profiles/" + uniqueFileName;
                 await _context.SaveChangesAsync();
-
-                // Update the session so the UI changes immediately
                 HttpContext.Session.SetString("UserIcon", user.IconURL);
             }
 
-            TempData["LoginSuccess"] = "Профилната снимка е обновена успешно!";
             return RedirectToAction("Index", "Home");
         }
     }

@@ -121,9 +121,9 @@ namespace GozbichkaWebApp.DB
                 new User
                 {
                     UserId = 1,
-                    Name = "Admin",
+                    Name = "admin",
                     Email = "admin@admin.com",
-                    Password = "admin",
+                    Password = "$2a$11$v/tnIAFbOncFT786KQVyNOpmoIkRmBB9SiqkzFYrDfeIGrGpUpf9i", //admin
                     Role = "Admin",
                     IconURL = "/images/default-user-icon.png"
                 }
