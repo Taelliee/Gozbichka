@@ -107,21 +107,26 @@
                         {
                             <!-- Display the Profile Picture Dropdown HERE -->
                             <div class="dropdown">
-                                <a href="#" class="d-block" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="@userIcon" alt="Profile" class="rounded-circle border border-white" style="width: 40px; height: 40px; object-fit: cover;">
+                                <a href="#" class="d-block profile-avatar-trigger" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="@userIcon" alt="Profile" class="profile-avatar-image">
                                 </a>
-                    
-                                <!-- Dropdown Menu for Profile Actions -->
-                                <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="profileDropdown">
-                                    <li class="px-3 py-2">
-                                        <!-- The Upload Form -->
-                                        <form asp-controller="Account" asp-action="UploadProfilePicture" method="post" enctype="multipart/form-data" class="d-flex flex-column gap-2">
-                                            <label for="profileImage" class="form-label small fw-bold mb-0">Смени снимка:</label>
-                                            <input type="file" name="profileImage" id="profileImage" class="form-control form-control-sm" accept="image/*" required>
-                                            <button type="submit" class="btn btn-warning btn-sm w-100">Качи</button>
-                                        </form>
-                                    </li>
-                                </ul>
+
+                                <div class="dropdown-menu dropdown-menu-end profile-avatar-menu shadow-sm p-3" aria-labelledby="profileDropdown">
+                                    <form asp-controller="Account" asp-action="UploadProfilePicture" method="post" enctype="multipart/form-data" class="d-flex flex-column gap-3">
+                                        <label for="profileImage" class="form-label small fw-bold mb-0 text-brown">Смени снимка:</label>
+
+                                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                                            <label for="profileImage" class="profile-upload-picker mb-0">
+                                                Качи снимка <span class="ms-2">+</span>
+                                            </label>
+                                            <span id="profileImageFileName" class="small text-muted fw-semibold profile-file-name">Няма файл</span>
+                                        </div>
+
+                                        <input type="file" name="profileImage" id="profileImage" class="d-none" accept="image/*" required>
+
+                                        <button type="submit" class="btn profile-upload-submit w-100">Качи</button>
+                                    </form>
+                                </div>
                             </div>
                         }
                         else
@@ -241,3 +246,18 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const profileImageInput = document.getElementById('profileImage');
+        const profileImageFileName = document.getElementById('profileImageFileName');
+
+        if (profileImageInput && profileImageFileName) {
+            profileImageInput.addEventListener('change', function () {
+                profileImageFileName.textContent = this.files.length > 0
+                    ? this.files[0].name
+                    : 'Няма файл';
+            });
+        }
+    });
+</script>
