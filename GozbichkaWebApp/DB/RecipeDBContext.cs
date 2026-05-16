@@ -26,9 +26,9 @@ namespace GozbichkaWebApp.DB
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Server=DESKTOP-VLMAI0N;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-VLMAI0N;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
             //optionsBuilder.UseSqlServer("Server=PETIAIGNATOVA\\SQLEXPRESS;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
-            optionsBuilder.UseSqlServer("Server=JUSTFREX\\SQLEXPRESS;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
+            //optionsBuilder.UseSqlServer("Server=JUSTFREX\\SQLEXPRESS;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
             //optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Gozbichka;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
@@ -135,7 +135,7 @@ namespace GozbichkaWebApp.DB
                     RecipeId = 1,
                     Title = "Мусака",
                     Description = "Класическа мусака.",
-                    CookingMethod = "Подреди продуктите и изпечи.",
+                    CookingMethod = "Подредете продуктите и изпечете.",
                     ImageURL = "/images/Moussaka.webp",
                     CookingTime = 90,
                     Portions = 4,
@@ -148,7 +148,7 @@ namespace GozbichkaWebApp.DB
                     RecipeId = 2,
                     Title = "Яйчена салата",
                     Description = "Лека яйчена салата.",
-                    CookingMethod = "Свари яйцата, смеси продуктите и сервирай.",
+                    CookingMethod = "Сварете яйцата, смесете продуктите и сервирайте.",
                     ImageURL = "/images/qichena.jpg",
                     CookingTime = 15,
                     Portions = 2,
@@ -161,7 +161,7 @@ namespace GozbichkaWebApp.DB
                     RecipeId = 3,
                     Title = "Баница",
                     Description = "Семпла домашна баница.",
-                    CookingMethod = "Смеси продуктите, подреди и изпечи.",
+                    CookingMethod = "Смесете продуктите, подредете и изпечете.",
                     ImageURL = "/images/Banitsa.jpg",
                     CookingTime = 45,
                     Portions = 6,
@@ -174,7 +174,7 @@ namespace GozbichkaWebApp.DB
                     RecipeId = 4,
                     Title = "Крем Брюле",
                     Description = "Класически крем брюле.",
-                    CookingMethod = "Смеси продуктите, изпече леко и охлади.",
+                    CookingMethod = "Смесете продуктите, изпечете леко и охладете.",
                     ImageURL = "/images/Creme_Brulee.jpg",
                     CookingTime = 50,
                     Portions = 4,

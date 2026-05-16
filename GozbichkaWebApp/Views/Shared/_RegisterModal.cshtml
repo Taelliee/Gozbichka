@@ -80,7 +80,7 @@
             showError('emailError', email, 'Имейлът е задължителен.');
             valid = false;
         } else if (!emailRegex.test(email.value.trim())) {
-            showError('emailError', email, 'Невалиден имейл адрес.');
+            showError('emailError', email, 'Невалиден имейл адрес. Пример: name@example.com');
             valid = false;
         }
 

@@ -1,0 +1,104 @@
+.badge-new {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    background-color: #ffbf69;
+    color: #61493c;
+    border-radius: 50%;
+    border: 3px solid #61493c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.1;
+    z-index: 10;
+}
+
+.card-zoom {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card-zoom:hover {
+    transform: scale(1.03);
+}
+
+.custom-arrow {
+    width: 50px;
+    opacity: 1;
+}
+
+.custom-arrow span {
+    color: #5d4037;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.teal-arrow span {
+    color: #26c6da;
+}
+
+.footer-custom {
+    background-color: #5d4037;
+    color: #d7ccc8;
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #f39c12;
+}
+
+.footer-input {
+    background: transparent !important;
+    border: 1px solid #795548;
+    color: white !important;
+    border-radius: 0;
+}
+
+.footer-input::placeholder {
+    color: #a1887f;
+}
+
+.footer-submit {
+    background: transparent;
+    border: 1px solid #795548;
+    border-left: none;
+    color: white;
+    padding: 0 15px;
+}
+
+.footer-submit:hover {
+    background-color: #f39c12;
+}
+
+.social-icons a {
+    color: #f39c12;
+    font-size: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}

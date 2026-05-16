@@ -1,0 +1,73 @@
+.product-chip {
+    position: relative;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+.chip-active {
+    background-color: #ffcc80;
+    color: #5d4037;
+    border: 2px solid #ffb74d;
+}
+
+.chip-inactive {
+    background-color: #ffffff;
+    color: #5d4037;
+    border: 2px solid #ffcc80;
+}
+
+.chip-inactive:hover {
+    background-color: #fff3e0;
+}
+
+.chip-active:hover {
+    background-color: #ffb74d;
+}
+
+.remove-chip-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #5d4037;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+
+.remove-chip-btn:hover {
+    background-color: #d32f2f;
+}
+
+.dropdown-menu-center {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.product-dropdown-item:hover {
+    background-color: #e0f7fa;
+    color: #26c6da;
+}
+
+.recipe-card-brown {
+    background-color: #5d4037;
+    transition: transform 0.2s;
+}
+
+.recipe-card-brown:hover {
+    transform: scale(1.03);
+}

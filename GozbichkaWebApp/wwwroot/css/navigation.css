@@ -1,0 +1,115 @@
+.top-bar {
+    background-color: #61493c;
+}
+
+.nav-orange {
+    background-color: #ff9f1c;
+}
+
+.nav-link.active-link {
+    color: #000000 !important;
+    border-bottom: 2px solid #26c6da;
+}
+
+.search-container {
+    border: 1px solid #26c6da;
+    background-color: #e0f7fa !important;
+}
+
+.category-select {
+    font-size: 0.9rem;
+    color: #5d4037;
+    cursor: pointer;
+}
+
+.search-container input {
+    background-color: white !important;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.divider {
+    width: 1px;
+    height: 25px;
+    background-color: #ccc;
+    margin: 0 5px;
+}
+
+.btn-search {
+    color: #333;
+    padding: 5px 12px;
+}
+
+.bi-list {
+    color: #5d4037;
+}
+
+.navbar-search-select {
+    padding-right: 35px !important;
+    min-width: 175px !important;
+    text-overflow: ellipsis;
+}
+
+.profile-avatar-trigger {
+    text-decoration: none;
+}
+
+.profile-avatar-image {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    background-color: #ffffff;
+}
+
+.profile-avatar-menu {
+    min-width: 280px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+.profile-upload-picker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 210px;
+    padding: 10px 22px;
+    background-color: #ffffff;
+    color: #5d4037;
+    border: 1px solid #6c757d;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile-upload-picker:hover {
+    background-color: #f8f9fa;
+    border-color: #5d4037;
+}
+
+.profile-upload-submit {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 10px 16px;
+}
+
+.profile-upload-submit:hover {
+    background-color: #ffb300;
+    border-color: #ffb300;
+    color: #212529;
+}
+
+.profile-file-name {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
