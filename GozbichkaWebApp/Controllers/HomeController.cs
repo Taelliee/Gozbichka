@@ -16,20 +16,16 @@ namespace GozbichkaWebApp.Controllers
 
         public IActionResult Index()
         {
-            // --- AUTO-LOGIN LOGIC ---
-            // If they are NOT logged into the session, check if they have the remember cookie
             if (HttpContext.Session.GetInt32("UserId") == null)
             {
                 var rememberCookie = Request.Cookies["RememberMe_UserId"];
 
                 if (!string.IsNullOrEmpty(rememberCookie) && int.TryParse(rememberCookie, out int userId))
                 {
-                    // Find the user in the database
                     var user = _context.Users.Find(userId);
 
                     if (user != null)
                     {
-                        // Restore their session!
                         HttpContext.Session.SetInt32("UserId", user.UserId);
                         HttpContext.Session.SetString("UserName", user.Name);
                         HttpContext.Session.SetString("UserIcon", user.IconURL);

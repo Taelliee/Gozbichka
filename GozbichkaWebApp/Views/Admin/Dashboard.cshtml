@@ -42,7 +42,6 @@
             <div class="row mb-4">
                 <div class="col-md-6">
                     <label class="form-label fw-bold small text-brown">Категория</label>
-                    <!-- Notice the name changed to MealCategoryId to match your Model -->
                     <select name="MealCategoryId" class="form-select form-control-rounded" required>
                         <option value="">Избери категория</option>
                         @foreach (var category in ViewBag.Categories)
@@ -53,12 +52,10 @@
                 </div>
                 <div class="col-md-6">
                     <label class="form-label fw-bold small text-brown">Трудност</label>
-                    <!-- Notice the name changed to DifficultyId -->
                     <select name="DifficultyId" class="form-select form-control-rounded" required>
                         <option value="">Избери трудност</option>
                         @foreach (var difficulty in ViewBag.Difficulties)
                         {
-                            // Because DifficultyType is an Enum, we call .ToString()
                             <option value="@difficulty.DifficultyId">@difficulty.DifficultyType.ToString()</option>
                         }
                     </select>
@@ -90,7 +87,7 @@
                     <!-- The Input Row -->
                     <div class="d-flex gap-2 mb-2">
                         
-                        <!-- Product Selection Wrapper (Locks the width for Select2) -->
+                        <!-- Product Selection Wrapper -->
                         <div style="flex: 4; min-width: 0;">
                             <select id="productSelect" class="form-select form-control-rounded" style="width: 100%;">
                                 <option value="">Избери продукт...</option>
@@ -129,9 +126,7 @@
                         
                     </div>
 
-                    <!-- The List Container (Where selected items will appear) -->
                     <div id="selectedProductsList" class="d-flex flex-column gap-2 mt-3">
-                        <!-- JavaScript will inject items here -->
                     </div>
                 </div>
             </div>
@@ -152,13 +147,11 @@
             <div class="mb-5">
                 <label class="form-label fw-bold small text-brown d-block">Снимка</label>
                 <div class="d-flex align-items-center gap-3">
-                    <!-- Hack to make a file input look like a button -->
                     <label for="recipeImage" class="btn bg-white text-dark-brown border border-secondary rounded-pill px-4 py-1 small mb-0" style="cursor: pointer;">
                         Качи снимка <span class="ms-2">+</span>
                     </label>
                     <input type="file" id="recipeImage" name="Image" class="d-none" accept="image/*">
                     
-                    <!-- Image Preview Container (Hidden by default) -->
                     <div id="imagePreviewContainer" class="d-none align-items-center gap-2">
                         <img id="imagePreview" src="#" alt="Preview" class="rounded shadow-sm" style="width: 60px; height: 60px; object-fit: cover; border: 2px solid #26a69a;">
                         <span id="imageFileName" class="small text-muted fw-semibold"></span>
@@ -243,7 +236,6 @@
                             <td class="fw-bold text-brown">@recipe.Title</td>
                             <td><span class="badge text-brown">@recipe.MealCategory?.Name</span></td>
                             <td class="text-end">
-                                <!-- The form wraps the button to safely send a POST request -->
                                 <form asp-controller="Admin" asp-action="DeleteRecipe" asp-route-id="@recipe.RecipeId" method="post" 
                                       onsubmit="return confirm('Сигурни ли сте, че искате да изтриете рецептата @recipe.Title? Това действие е необратимо!');">
                                     <button type="submit" class="btn btn-sm btn-danger fw-bold text-white shadow-sm rounded-pill px-3">
@@ -259,7 +251,6 @@
     </div>
 </div>
 
-<!-- Select2 CSS for Searchable Dropdowns -->
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 <style>
@@ -353,12 +344,10 @@
         document.addEventListener('DOMContentLoaded', function () {
             switchTab('add');
 
-            // --- INITIALIZE SEARCHABLE DROPDOWNS ---
             if (window.jQuery) {
                 $('select[name="MealCategoryId"]').select2({ width: '100%' });
                 $('#productSelect').select2({ width: '100%' });
             }
-            // ---------------------------------------
 
             const imageInput = document.getElementById('recipeImage');
             const imagePreviewContainer = document.getElementById('imagePreviewContainer');
@@ -427,7 +416,6 @@
                 quantityInput.value = '';
                 unitSelect.value = 'бр.'; 
                 
-                // VISUAL RESET FOR SELECT2 SEARCH BOX
                 if (window.jQuery) { $(productSelect).trigger('change'); }
                 
                 productIndex++;

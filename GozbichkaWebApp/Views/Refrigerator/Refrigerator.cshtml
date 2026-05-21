@@ -8,7 +8,6 @@
     <form asp-action="SearchRecipes" method="post" id="refrigeratorForm">
         <input type="hidden" asp-for="UserId" id="UserId" />
 
-        <!-- Hidden Data Store -->
         <div id="fridgeDataStore" class="d-none">
             @foreach (var product in Model.AllProducts)
             {
@@ -24,7 +23,6 @@
             }
         </div>
 
-        <!-- This container holds the inputs we actually send to C# -->
         <div id="hiddenInputContainer"></div>
 
         <!-- Header -->
@@ -119,7 +117,6 @@
             
             renderChips();
 
-            // 1. Dropdown Filtering
             document.getElementById('productSearch').addEventListener('input', function() {
                 var filter = this.value.toLowerCase();
                 document.querySelectorAll('.product-dropdown-item').forEach(function(item) {
@@ -127,7 +124,6 @@
                 });
             });
 
-            // 2. Add Product
             document.querySelectorAll('.product-dropdown-item').forEach(function(item) {
                 item.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -143,7 +139,6 @@
                 });
             });
 
-            // 3. Render HTML
             function renderChips() {
                 var container = document.getElementById('chipsContainer');
                 container.innerHTML = ''; 
@@ -163,7 +158,6 @@
                 });
             }
 
-            // 4. Interaction Logic
             window.toggleActive = function(id) {
                 var el = document.querySelector(`.product-data[data-id="${id}"]`);
                 if (el) {
@@ -184,24 +178,19 @@
                 }
             };
 
-            // 5. Clean Background Auto-Save
             let saveTimeout;
             function triggerAutoSave() {
                 var formData = new FormData();
                 formData.append('userId', userId);
                 
-                // Add all items in the fridge
                 document.querySelectorAll('.product-data[data-in-fridge="true"]').forEach(function(el) {
                     formData.append('fridgeProductIds', el.getAttribute('data-id'));
                     
-                    // If it is also active, add it to the active list!
                     if (el.getAttribute('data-active') === 'true') {
                         formData.append('activeSearchProductIds', el.getAttribute('data-id'));
                     }
                 });
 
-                // Notice we removed the "if (userId <= 0) return;" 
-                // We WANT guests to hit this endpoint so they get their cookies saved!
                 fetch('@Url.Action("AutoSaveFridge", "Refrigerator")', { method: 'POST', body: formData })
                     .then(() => {
                         var ind = document.getElementById('saveIndicator');
@@ -211,17 +200,14 @@
                     });
             }
 
-            // 6. Build final inputs on submit
             document.getElementById('btnSearch').addEventListener('click', function() {
                 var container = document.getElementById('hiddenInputContainer');
                 container.innerHTML = '';
                 
-                // Send what they own
                 document.querySelectorAll('.product-data[data-in-fridge="true"]').forEach(function(el) {
                      container.innerHTML += `<input type="hidden" name="FridgeProductIds" value="${el.getAttribute('data-id')}">`;
                 });
 
-                // Send what they are searching with
                 document.querySelectorAll('.product-data[data-in-fridge="true"][data-active="true"]').forEach(function(el) {
                      container.innerHTML += `<input type="hidden" name="ActiveSearchProductIds" value="${el.getAttribute('data-id')}">`;
                 });

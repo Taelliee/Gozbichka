@@ -7,18 +7,10 @@ namespace GozbichkaWebApp.Models
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-
-        //getimage?
         public string IconURL { get; set; } = "/images/default-user-icon.png";
-
-        //more changes to password
         public string Password { get; set; }
         public string Role { get; set; } = "User";
 
-        //public ICollection<UserAllergen> UserAllergens { get; set; }
         public ICollection<Refrigerator> Refrigerators { get; set; }
-        //public ICollection<Favorites> Favorites { get; set; }
-        //public ICollection<History> Histories { get; set; }
-        //public ICollection<Rating> Ratings { get; set; }
     }
 }

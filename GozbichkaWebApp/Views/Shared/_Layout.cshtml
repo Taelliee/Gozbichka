@@ -6,7 +6,6 @@
     <title>@ViewData["Title"]</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <!-- ADDED: Bootstrap Icons CDN so your icons appear! -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LibraryProject.styles.css" asp-append-version="true" />
@@ -24,7 +23,6 @@
 
                 @if (currentUserId.HasValue)
                 {
-                    <!-- ADMIN SHIELD: Only shows if the Session Role is "Admin" -->
                     @if (Context.Session.GetString("UserRole") == "Admin")
                     {
                         <a href="/Admin/Dashboard" class="text-white text-decoration-none small me-2" title="Админ Панел">
@@ -32,7 +30,6 @@
                         </a>
                     }
 
-                    <!-- Plain text greeting, no dropdown, no caret -->
                     <span class="text-white small fw-bold me-3">
                         Здравей, @currentUserName!
                     </span>
@@ -43,7 +40,6 @@
                 }
                 else
                 {
-                    <!-- Guest links (Notice the shield is gone from here!) -->
                     <a href="#" class="text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#registerModal"><i class="bi bi-megaphone" style="color: #2ec4b6"></i> РЕГИСТРАЦИЯ</a>
                     <a href="#" class="text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bi bi-person" style="color: #2ec4b6"></i> ВХОД</a>
                 }
@@ -61,7 +57,6 @@
                 <!-- Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     @{
-                        // This grabs the name of the current page you are on
                         var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
                         var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
                     }
@@ -105,7 +100,6 @@
                     <div class="d-flex align-items-center gap-3">
                         @if (currentUserId.HasValue)
                         {
-                            <!-- Display the Profile Picture Dropdown HERE -->
                             <div class="dropdown">
                                 <a href="#" class="d-block profile-avatar-trigger" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="@userIcon" alt="Profile" class="profile-avatar-image">
@@ -136,7 +130,7 @@
                         }
 
                         <button class="btn border-0 p-0 text-dark">
-                            <i class="bi bi-list fs-1"></i> <!-- This is the hamburger icon -->
+                            <i class="bi bi-list fs-1"></i> 
                         </button>
                     </div>
                 </div>

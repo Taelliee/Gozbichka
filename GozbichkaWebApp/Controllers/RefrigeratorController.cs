@@ -22,7 +22,6 @@ namespace GozbichkaWebApp.Controllers
             List<int> fridgeIds = new List<int>();
             List<int> activeIds = new List<int>();
 
-            // 1. Load Fridge Products
             if (userId > 0)
             {
                 fridgeIds = _context.Refrigerators.Where(r => r.UserId == userId).Select(r => r.ProductId).ToList();
@@ -30,17 +29,14 @@ namespace GozbichkaWebApp.Controllers
             else
             {
                 var guestFridgeCookie = Request.Cookies["GuestFridge"];
-                // FIX: Check that it doesn't equal our magic word "NONE"
                 if (!string.IsNullOrEmpty(guestFridgeCookie) && guestFridgeCookie != "NONE")
                     fridgeIds = guestFridgeCookie.Split(',').Select(int.Parse).ToList();
             }
 
-            // 2. Load Active State
             if (Request.Cookies.ContainsKey("ActiveSearch"))
             {
                 var activeStateCookie = Request.Cookies["ActiveSearch"];
 
-                // FIX: If the cookie has data AND isn't "NONE", parse the IDs
                 if (!string.IsNullOrWhiteSpace(activeStateCookie) && activeStateCookie != "NONE")
                 {
                     activeIds = activeStateCookie.Split(',').Select(int.Parse).ToList();
@@ -48,13 +44,11 @@ namespace GozbichkaWebApp.Controllers
                 }
                 else
                 {
-                    // If the cookie equals "NONE", they explicitly unselected everything.
                     activeIds = new List<int>();
                 }
             }
             else
             {
-                // The cookie is completely missing (first time visiting).
                 activeIds = fridgeIds.ToList();
             }
 
@@ -87,7 +81,6 @@ namespace GozbichkaWebApp.Controllers
 
             var cookieOptions = new CookieOptions { Expires = DateTime.Now.AddDays(30) };
 
-            // FIX: If the list has items, save them. If it's empty, save the string "NONE" instead of ""
             string fridgeCookieValue = (fridgeProductIds != null && fridgeProductIds.Any())
                 ? string.Join(",", fridgeProductIds)
                 : "NONE";

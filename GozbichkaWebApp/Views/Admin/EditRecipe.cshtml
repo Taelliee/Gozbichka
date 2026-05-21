@@ -1,7 +1,6 @@
 ﻿@model GozbichkaWebApp.Models.Recipe
 @{
     ViewData["Title"] = "Редактирай Рецепта";
-    // Calculate hours and minutes backwards from total time
     int hours = (int)(Model.CookingTime / 60);
     int minutes = (int)(Model.CookingTime % 60);
 }
@@ -64,7 +63,6 @@
                     <!-- The Input Row -->
                     <div class="d-flex gap-2 mb-2">
                         
-                        <!-- Product Selection Wrapper (Locks the width for Select2) -->
                         <div style="flex: 4; min-width: 0;">
                             <select id="productSelect" class="form-select form-control-rounded" style="width: 100%;">
                                 <option value="">Избери продукт...</option>
@@ -154,7 +152,6 @@
     </div>
 </div>
 
-<!-- Select2 CSS for Searchable Dropdowns -->
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 <style>
@@ -194,7 +191,6 @@
         box-shadow: 0 0 0 0.25rem rgba(38, 166, 154, 0.25);
     }
 
-    /* Select2 Custom Styling to Match Your Theme */
     .select2-container .select2-selection--single {
         height: 38px !important;
         border-radius: 12px !important;
@@ -218,18 +214,15 @@
 </style>
 
 @section Scripts {
-    <!-- Select2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             
-            // --- INITIALIZE SEARCHABLE DROPDOWNS ---
             if (window.jQuery) {
                 $('select[name="MealCategoryId"]').select2({ width: '100%' });
                 $('#productSelect').select2({ width: '100%' });
             }
-            // ---------------------------------------
 
             const addBtn = document.getElementById('addProductBtn');
             const productSelect = document.getElementById('productSelect');
@@ -263,7 +256,6 @@
                 quantityInput.value = ''; 
                 unitSelect.value = 'бр.'; 
                 
-                // VISUAL RESET FOR SELECT2 SEARCH BOX
                 if (window.jQuery) { $(productSelect).trigger('change'); }
                 
                 productIndex++;
